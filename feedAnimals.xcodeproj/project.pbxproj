@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA069F6C1F16499400058D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F6B1F16499400058D03 /* AppDelegate.swift */; };
-		FA069F6E1F16499400058D03 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA069F6D1F16499400058D03 /* GameScene.sks */; };
 		FA069F701F16499400058D03 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FA069F6F1F16499400058D03 /* Actions.sks */; };
 		FA069F721F16499400058D03 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F711F16499400058D03 /* GameScene.swift */; };
 		FA069F741F16499400058D03 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F731F16499400058D03 /* GameViewController.swift */; };
@@ -19,6 +18,7 @@
 		FA069F921F16499500058D03 /* feedAnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F911F16499500058D03 /* feedAnimalsUITests.swift */; };
 		FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA11F168B4300058D03 /* StartViewController.swift */; };
 		FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA31F16930100058D03 /* SelectTaskViewController.swift */; };
+		FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAE3BE981F35A18F000FFE1B /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		FA069F681F16499400058D03 /* feedAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feedAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA069F6B1F16499400058D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA069F6D1F16499400058D03 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		FA069F6F1F16499400058D03 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		FA069F711F16499400058D03 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		FA069F731F16499400058D03 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		FA069F931F16499500058D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA069FA11F168B4300058D03 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ../StartViewController.swift; sourceTree = "<group>"; };
 		FA069FA31F16930100058D03 /* SelectTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTaskViewController.swift; sourceTree = "<group>"; };
+		FAE3BE981F35A18F000FFE1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +111,8 @@
 				FA069FA31F16930100058D03 /* SelectTaskViewController.swift */,
 				FA069F731F16499400058D03 /* GameViewController.swift */,
 				FA069F6B1F16499400058D03 /* AppDelegate.swift */,
+				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
 				FA069F711F16499400058D03 /* GameScene.swift */,
-				FA069F6D1F16499400058D03 /* GameScene.sks */,
 				FA069F6F1F16499400058D03 /* Actions.sks */,
 				FA069F751F16499400058D03 /* Main.storyboard */,
 				FA069F781F16499400058D03 /* Assets.xcassets */,
@@ -208,6 +208,7 @@
 				TargetAttributes = {
 					FA069F671F16499400058D03 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = P2WRP822S6;
 						ProvisioningStyle = Automatic;
 					};
 					FA069F811F16499400058D03 = {
@@ -248,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA069F771F16499400058D03 /* Main.storyboard in Resources */,
-				FA069F6E1F16499400058D03 /* GameScene.sks in Resources */,
+				FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */,
 				FA069F791F16499400058D03 /* Assets.xcassets in Resources */,
 				FA069F7C1F16499400058D03 /* LaunchScreen.storyboard in Resources */,
 				FA069F701F16499400058D03 /* Actions.sks in Resources */,
@@ -434,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P2WRP822S6;
 				INFOPLIST_FILE = feedAnimals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.lmu.ifi.mobile.iOSPraktikum.feedAnimals;
@@ -446,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P2WRP822S6;
 				INFOPLIST_FILE = feedAnimals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.lmu.ifi.mobile.iOSPraktikum.feedAnimals;
@@ -527,6 +530,7 @@
 				FA069F981F16499500058D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA069F991F16499500058D03 /* Build configuration list for PBXNativeTarget "feedAnimalsTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +539,7 @@
 				FA069F9B1F16499500058D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA069F9C1F16499500058D03 /* Build configuration list for PBXNativeTarget "feedAnimalsUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +548,7 @@
 				FA069F9E1F16499500058D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
