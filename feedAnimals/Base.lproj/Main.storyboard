@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Asymmetric Task"/>
                                 <connections>
-                                    <segue destination="1KS-0s-gh1" kind="show" id="cqK-Mu-c4Z"/>
+                                    <segue destination="xqh-cI-UgG" kind="show" id="xzP-Lv-Afi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-Df-RVU">
@@ -43,7 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Symmetric Task"/>
                                 <connections>
-                                    <segue destination="1KS-0s-gh1" kind="show" id="L5P-0p-g3b"/>
+                                    <segue destination="xqh-cI-UgG" kind="show" id="Rju-HE-vPa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,38 +63,42 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="lWO-ch-kRb">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="65s-WS-dLc">
+                            <connections>
+                                <segue destination="FnF-oa-yD7" kind="presentation" id="qKS-Wx-J0P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFt-24-3FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929.88281249999989" y="-16.40625"/>
+            <point key="canvasLocation" x="1654.1015625" y="-16.40625"/>
         </scene>
-        <!--Game View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <!--View Controller-->
+        <scene sceneID="AAB-1O-2uw">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="he6-da-gHb" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
-                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                        <viewControllerLayoutGuide type="top" id="J4M-Eu-oBX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wEJ-dV-m4P"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" id="Lxt-A5-XYY">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-cO-gl5">
-                                <rect key="frame" x="650" y="320" width="354" height="297"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="dI7-xr-OIF">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="rcr-9u-pzP"/>
+                    <navigationItem key="navigationItem" id="eDh-XL-Q9H">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K5u-8Q-MsY">
+                            <connections>
+                                <segue destination="0RA-g2-69v" kind="presentation" id="TGW-yf-De6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pd-q3-8f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="-34"/>
+            <point key="canvasLocation" x="3233.7890625" y="-16.40625"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="WTn-xT-h9W">
@@ -117,7 +121,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="play"/>
                                 <connections>
-                                    <segue destination="Avf-0i-DiS" kind="show" id="aIz-Tz-DRZ"/>
+                                    <segue destination="0RA-g2-69v" kind="show" id="aIz-Tz-DRZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="hRx-YC-ptz">
@@ -151,22 +155,40 @@
             <point key="canvasLocation" x="141.796875" y="-16.40625"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="JwI-eR-myl">
+        <scene sceneID="lcr-sa-xWE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1KS-0s-gh1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xqh-cI-UgG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e0Y-DS-cXo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="263-Yt-twD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="TeP-SH-5v1"/>
+                        <segue destination="he6-da-gHb" kind="relationship" relationship="rootViewController" id="bHs-o6-DmL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5rl-nO-2I5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imx-oH-E1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.3125" y="-16.40625"/>
+            <point key="canvasLocation" x="2433.984375" y="-16.40625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="csB-Fh-4Us">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0RA-g2-69v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rQ3-IU-f7F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Avf-0i-DiS" kind="relationship" relationship="rootViewController" id="ADd-bf-dKs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKi-UP-bcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929.88281249999989" y="-16.40625"/>
         </scene>
     </scenes>
     <resources>
@@ -175,6 +197,7 @@
         <image name="play" width="84" height="84"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cqK-Mu-c4Z"/>
+        <segue reference="xzP-Lv-Afi"/>
+        <segue reference="TGW-yf-De6"/>
     </inferredMetricsTieBreakers>
 </document>
