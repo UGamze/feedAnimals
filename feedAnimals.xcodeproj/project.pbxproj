@@ -18,7 +18,7 @@
 		FA069F921F16499500058D03 /* feedAnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F911F16499500058D03 /* feedAnimalsUITests.swift */; };
 		FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA11F168B4300058D03 /* StartViewController.swift */; };
 		FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA31F16930100058D03 /* SelectTaskViewController.swift */; };
-		FA09DBCE1F3A408F0052BE4B /* PlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09DBCD1F3A408F0052BE4B /* PlaygroundViewController.swift */; };
+		FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */; };
 		FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAE3BE981F35A18F000FFE1B /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		FA069F931F16499500058D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA069FA11F168B4300058D03 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ../StartViewController.swift; sourceTree = "<group>"; };
 		FA069FA31F16930100058D03 /* SelectTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTaskViewController.swift; sourceTree = "<group>"; };
-		FA09DBCD1F3A408F0052BE4B /* PlaygroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundViewController.swift; sourceTree = "<group>"; };
+		FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		FAE3BE981F35A18F000FFE1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,15 +112,15 @@
 				FA069FA11F168B4300058D03 /* StartViewController.swift */,
 				FA069FA31F16930100058D03 /* SelectTaskViewController.swift */,
 				FA069F731F16499400058D03 /* GameViewController.swift */,
-				FA09DBCD1F3A408F0052BE4B /* PlaygroundViewController.swift */,
+				FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */,
 				FA069F6B1F16499400058D03 /* AppDelegate.swift */,
-				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
 				FA069F711F16499400058D03 /* GameScene.swift */,
-				FA069F6F1F16499400058D03 /* Actions.sks */,
 				FA069F751F16499400058D03 /* Main.storyboard */,
 				FA069F781F16499400058D03 /* Assets.xcassets */,
 				FA069F7A1F16499400058D03 /* LaunchScreen.storyboard */,
 				FA069F7D1F16499400058D03 /* Info.plist */,
+				FA069F6F1F16499400058D03 /* Actions.sks */,
+				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
 			);
 			path = feedAnimals;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 				FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */,
 				FA069F721F16499400058D03 /* GameScene.swift in Sources */,
 				FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */,
+				FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */,
 				FA069F741F16499400058D03 /* GameViewController.swift in Sources */,
 				FA069F6C1F16499400058D03 /* AppDelegate.swift in Sources */,
-				FA09DBCE1F3A408F0052BE4B /* PlaygroundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
