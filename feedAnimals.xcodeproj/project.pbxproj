@@ -18,6 +18,7 @@
 		FA069F921F16499500058D03 /* feedAnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069F911F16499500058D03 /* feedAnimalsUITests.swift */; };
 		FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA11F168B4300058D03 /* StartViewController.swift */; };
 		FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA31F16930100058D03 /* SelectTaskViewController.swift */; };
+		FA479F6B1F403D2300475274 /* FVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA479F6A1F403D2300475274 /* FVViewController.swift */; };
 		FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */; };
 		FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAE3BE981F35A18F000FFE1B /* GameScene.sks */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		FA069F931F16499500058D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA069FA11F168B4300058D03 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ../StartViewController.swift; sourceTree = "<group>"; };
 		FA069FA31F16930100058D03 /* SelectTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTaskViewController.swift; sourceTree = "<group>"; };
+		FA479F6A1F403D2300475274 /* FVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FVViewController.swift; sourceTree = "<group>"; };
 		FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		FAE3BE981F35A18F000FFE1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				FA069F7D1F16499400058D03 /* Info.plist */,
 				FA069F6F1F16499400058D03 /* Actions.sks */,
 				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
+				FA479F6A1F403D2300475274 /* FVViewController.swift */,
 			);
 			path = feedAnimals;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA479F6B1F403D2300475274 /* FVViewController.swift in Sources */,
 				FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */,
 				FA069F721F16499400058D03 /* GameScene.swift in Sources */,
 				FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */,

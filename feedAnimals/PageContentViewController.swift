@@ -33,11 +33,10 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         
         
         if let firstVC = VCArr.first{
+            
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
             
         }
-        
-        
     }
 
     override func viewDidLayoutSubviews() {
@@ -49,12 +48,14 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
             }else if view is UIPageControl{
                 view.backgroundColor = UIColor.clear
                 
-
-                
             }
         }
     }
     
+    func changeVC(VC: UIViewController) {
+        setViewControllers([VC], direction: .forward, animated: true, completion: nil)
+    }
+
 
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
         
