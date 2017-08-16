@@ -17,7 +17,7 @@ class FVViewController: UIViewController {
     // Function for firstVC
     @IBAction func startAnimation(_ sender: UIButton) {
         animateView(objectFarmer: animatedFarmer)
-        createSpeechBubbleText(textForSpeech: "Hallo, ich bin der Bauer Heinz...")
+        createSpeechBubbleText(textForSpeech: "Hallo, ich bin der Bauer Heinz...", nameOfImage: "speechBubble")
     }
     //Objects for secondVC
     @IBOutlet weak var sVCanimatedFarmer: UIImageView!
@@ -26,7 +26,7 @@ class FVViewController: UIViewController {
     //Function for secondVC
     @IBAction func sVCstartAmination(_ sender: UIButton) {
         animateView(objectFarmer: sVCanimatedFarmer)
-        createSpeechBubbleText(textForSpeech:"... und ich hab ein Bauernhof mit vielen Tieren: Kühen, Enten, Hasen usw.")
+        createSpeechBubbleText(textForSpeech:"... und ich hab ein Bauernhof mit vielen Tieren: Kühen, Enten, Hasen usw.", nameOfImage: "speechBubble")
         animateView(objectFarmer: insertNewObject(name: "cow", rec: CGRect(x: 850, y: 480, width: 160, height: 200)))
         
         animateView(objectFarmer: insertNewObject(name: "sheep", rec: CGRect(x: 710, y: 525, width: 150, height: 150)))
@@ -36,6 +36,30 @@ class FVViewController: UIViewController {
         animateView(objectFarmer: insertNewObject(name: "chicken", rec: CGRect(x: 650, y: 600, width: 150, height: 150)))
         
         animateView(objectFarmer: insertNewObject(name: "bunny", rec: CGRect(x: 780, y: 600, width: 120, height: 150)))
+    }
+    
+    //Objects for thirdVC
+    @IBOutlet weak var thirdVCanimationButton: UIButton!
+    @IBOutlet weak var thirdVCanimatedFood: UIImageView!
+    @IBOutlet weak var thirdVCanimatedFeestar: UIImageView!
+    
+    //Function for thirdVC
+    @IBAction func thirdVCstartAmination(_ sender: UIButton) {
+        animateView(objectFarmer: thirdVCanimatedFood)
+        animateView(objectFarmer: thirdVCanimatedFeestar)
+        createSpeechBubbleText(textForSpeech:"... eines Tages kommt die Sternenfee zu Bauer Heinz. Sie hat ein Zauberfutter dabei. Sie sagt, dass ihr Zauberfutter Tiere glücklich macht.", nameOfImage: "speechBubble-eckig")
+    }
+    
+    //Objects for fourthVC
+    @IBOutlet weak var fourthVCanimatedFeemoon: UIImageView!
+    @IBOutlet weak var fourthVCanimatedStart: UIButton!
+    @IBOutlet weak var fourthVCanimatedFood: UIImageView!
+    
+    //Function for fourthVC
+    @IBAction func fourthVCanimationStart(_ sender: UIButton) {
+        animateView(objectFarmer: fourthVCanimatedFood)
+        animateView(objectFarmer: fourthVCanimatedFeemoon)
+        createSpeechBubbleText(textForSpeech:"... am gleichen Tag kommt auch die Mondfee. Auch sie hat ein Zauberfutter dabei und sagt, dass ihr Zauberfutter Tiere glücklich macht.", nameOfImage: "speechBubble-eckig")
     }
     
     override func viewDidLoad() {
@@ -58,26 +82,26 @@ class FVViewController: UIViewController {
     }**/
     
         
-        func animateView(objectFarmer:UIImageView){
-            UIView.animate(withDuration: 1,delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+    func animateView(objectFarmer:UIImageView){
+        UIView.animate(withDuration: 1,delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 objectFarmer.frame.size.width += 30
                 objectFarmer.frame.size.height += 30
             }) { _ in
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
-                    objectFarmer.frame.size.width -= 30
-                    objectFarmer.frame.size.height -= 30
-                })
-            }
+            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
+                objectFarmer.frame.size.width -= 30
+                objectFarmer.frame.size.height -= 30
+            })
         }
+    }
         
-    func createSpeechBubbleText(textForSpeech:NSString) {
+    func createSpeechBubbleText(textForSpeech:NSString, nameOfImage: String) {
         //create speechBubble with text and switch position
-        let imageView = UIImageView(image: UIImage(named: "speechBubble")!)
+        let imageView = UIImageView(image: UIImage(named: nameOfImage)!)
         imageView.frame = CGRect(x: 780, y: 250, width: 200, height: 190)
         view.addSubview(imageView)
         //spiegelt das Bild
         imageView.transform = CGAffineTransform(scaleX: -1, y: 1)
-        let text = UITextView(frame: CGRect(x: 808, y: 280, width: 150, height: 150))
+        let text = UITextView(frame: CGRect(x: 808, y: 260, width: 150, height: 130))
         text.text = textForSpeech as String!
         text.textColor = UIColor.black
         text.backgroundColor = UIColor.clear

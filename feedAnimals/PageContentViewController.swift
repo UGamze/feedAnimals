@@ -13,7 +13,8 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
     lazy var VCArr: [UIViewController] = {
         return [self.VCInstance(name: "FirstPageViewController"),
                 self.VCInstance(name: "SecondPageViewController"),
-                self.VCInstance(name: "ThirdPageViewController")]
+                self.VCInstance(name: "ThirdPageViewController"),
+                self.VCInstance(name: "FourthPageViewController")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{

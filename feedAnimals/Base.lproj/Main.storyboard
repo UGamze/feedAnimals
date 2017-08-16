@@ -246,7 +246,7 @@
         <!--View Controller-->
         <scene sceneID="HDJ-G1-UhA">
             <objects>
-                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" id="hE0-gY-UkO" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" id="hE0-gY-UkO" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QsB-uh-pA8"/>
                         <viewControllerLayoutGuide type="bottom" id="xZb-yn-0mZ"/>
@@ -260,20 +260,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fee" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-9F-ncy">
-                                <rect key="frame" x="392" y="320" width="240" height="128"/>
+                                <rect key="frame" x="644" y="481" width="245" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happy Bunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-aH-xQG">
-                                <rect key="frame" x="457" y="161" width="110" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animalFeedStar" translatesAutoresizingMaskIntoConstraints="NO" id="MIo-Wm-cHw">
+                                <rect key="frame" x="515" y="527" width="190" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDB-W4-hct">
-                                <rect key="frame" x="465" y="703" width="95" height="30"/>
+                                <rect key="frame" x="446" y="702" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Again"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="thirdVCstartAmination:" destination="hE0-gY-UkO" eventType="touchUpInside" id="IvE-hp-2Ub"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,15 +281,72 @@
                     <navigationItem key="navigationItem" id="7cF-Pm-0Ts">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qRv-gu-ONX"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="thirdVCanimatedFeestar" destination="WjS-9F-ncy" id="7tX-by-JxG"/>
+                        <outlet property="thirdVCanimatedFood" destination="MIo-Wm-cHw" id="wdT-th-lEn"/>
+                        <outlet property="thirdVCanimationButton" destination="mDB-W4-hct" id="t0S-jR-fKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOU-X5-ZX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3943.9453124999995" y="890.625"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rEb-ry-4h3">
+            <objects>
+                <viewController restorationIdentifier="FourthPageViewController" storyboardIdentifier="FourthPageViewController" id="ii2-Wg-FOw" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fG3-uS-tdF"/>
+                        <viewControllerLayoutGuide type="bottom" id="nd9-BB-bKc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V3e-Xz-yCi">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-gC-dGy">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feeWithOpenhair" translatesAutoresizingMaskIntoConstraints="NO" id="vFL-ZA-KeW">
+                                <rect key="frame" x="471" y="527" width="234" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-5P-fgY">
+                                <rect key="frame" x="446" y="702" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Animation"/>
+                                <connections>
+                                    <action selector="fourthVCanimationStart:" destination="ii2-Wg-FOw" eventType="touchUpInside" id="1Av-Ma-hfc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animalFeedMoon" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-ac-idC">
+                                <rect key="frame" x="687" y="498" width="177" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPU-4y-Rwy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I31-a9-Gdj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fourthVCanimatedFeemoon" destination="vFL-ZA-KeW" id="jQW-eh-Pct"/>
+                        <outlet property="fourthVCanimatedFood" destination="Axn-ac-idC" id="d0t-Kz-L88"/>
+                        <outlet property="fourthVCanimatedStart" destination="XkM-5P-fgY" id="vyN-we-3aW"/>
+                        <outlet property="thirdVCanimatedFeestar" destination="Axn-ac-idC" id="nBe-qR-Xrr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXf-qA-JEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4691.6015625" y="890.625"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="animalFeedMoon" width="405" height="532"/>
+        <image name="animalFeedStar" width="449" height="532"/>
         <image name="farmer" width="656" height="1035"/>
         <image name="fee" width="891" height="987"/>
+        <image name="feeWithOpenhair" width="804" height="934"/>
         <image name="landscape" width="1267" height="712"/>
         <image name="play" width="84" height="84"/>
     </resources>
