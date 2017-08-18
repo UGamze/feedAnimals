@@ -14,7 +14,8 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         return [self.VCInstance(name: "FirstPageViewController"),
                 self.VCInstance(name: "SecondPageViewController"),
                 self.VCInstance(name: "ThirdPageViewController"),
-                self.VCInstance(name: "FourthPageViewController")]
+                self.VCInstance(name: "FourthPageViewController"),
+                self.VCInstance(name: "TransitionPageViewController")]
     }()
     
     private func VCInstance(name: String) -> UIViewController{

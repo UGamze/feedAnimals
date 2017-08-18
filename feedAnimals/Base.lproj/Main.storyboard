@@ -200,6 +200,75 @@
             </objects>
             <point key="canvasLocation" x="929.88281249999989" y="-16.40625"/>
         </scene>
+        <!--Transition Game View Controller-->
+        <scene sceneID="F5M-Oe-WSt">
+            <objects>
+                <viewController restorationIdentifier="TransitionPageViewController" storyboardIdentifier="TransitionPageViewController" id="aaa-Rt-oVu" customClass="TransitionGameViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MQJ-n3-o9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="0nh-Vj-nmW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CYZ-6C-BGk">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blankoBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-1c-9ob">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="Fh2-Zn-jNh">
+                                <rect key="frame" x="0.0" y="187" width="324" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q58-KB-Z7M">
+                                <rect key="frame" x="47" y="393" width="230" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="farmer"/>
+                                <connections>
+                                    <action selector="touchFarmer:" destination="aaa-Rt-oVu" eventType="touchUpInside" id="hN9-0m-6D4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqX-pf-aEI">
+                                <rect key="frame" x="237" y="320" width="787" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="farmer" destination="q58-KB-Z7M" id="q8D-XM-gWP"/>
+                        <outlet property="randomViewofAnimal" destination="WqX-pf-aEI" id="11d-Yd-e71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGQ-Ua-xIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5449" y="891"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5eb-nm-B3X">
+            <objects>
+                <viewController restorationIdentifier="GameViewController" storyboardIdentifier="GameViewController" id="qmw-d6-jWO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="chq-Hh-PU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LoK-o8-9Zu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3P0-ms-bQv">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-Qk-saX">
+                                <rect key="frame" x="489" y="369" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FF-U4-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189" y="-16"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="r4N-GE-eoC">
             <objects>
@@ -344,11 +413,13 @@
     <resources>
         <image name="animalFeedMoon" width="405" height="532"/>
         <image name="animalFeedStar" width="449" height="532"/>
+        <image name="blankoBackground2" width="1280" height="960"/>
         <image name="farmer" width="656" height="1035"/>
         <image name="fee" width="891" height="987"/>
         <image name="feeWithOpenhair" width="804" height="934"/>
         <image name="landscape" width="1267" height="712"/>
         <image name="play" width="84" height="84"/>
+        <image name="tree" width="4992" height="4478"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="avn-Rt-NNn"/>
