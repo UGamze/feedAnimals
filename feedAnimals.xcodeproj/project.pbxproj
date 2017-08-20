@@ -115,18 +115,18 @@
 			children = (
 				FA069FA11F168B4300058D03 /* StartViewController.swift */,
 				FA069FA31F16930100058D03 /* SelectTaskViewController.swift */,
-				FA069F731F16499400058D03 /* GameViewController.swift */,
 				FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */,
+				FA479F6A1F403D2300475274 /* FVViewController.swift */,
+				FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */,
+				FA069F731F16499400058D03 /* GameViewController.swift */,
 				FA069F6B1F16499400058D03 /* AppDelegate.swift */,
-				FA069F711F16499400058D03 /* GameScene.swift */,
 				FA069F751F16499400058D03 /* Main.storyboard */,
 				FA069F781F16499400058D03 /* Assets.xcassets */,
 				FA069F7A1F16499400058D03 /* LaunchScreen.storyboard */,
+				FA069F711F16499400058D03 /* GameScene.swift */,
 				FA069F7D1F16499400058D03 /* Info.plist */,
 				FA069F6F1F16499400058D03 /* Actions.sks */,
 				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
-				FA479F6A1F403D2300475274 /* FVViewController.swift */,
-				FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */,
 			);
 			path = feedAnimals;
 			sourceTree = "<group>";

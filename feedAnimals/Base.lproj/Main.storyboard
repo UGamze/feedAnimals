@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1654.1015625" y="-16.40625"/>
         </scene>
-        <!--View Controller-->
+        <!--FirstPage-->
         <scene sceneID="AAB-1O-2uw">
             <objects>
-                <viewController restorationIdentifier="FirstPageViewController" storyboardIdentifier="FirstPageViewController" id="he6-da-gHb" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FirstPageViewController" storyboardIdentifier="FirstPageViewController" title="FirstPage" id="he6-da-gHb" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J4M-Eu-oBX"/>
                         <viewControllerLayoutGuide type="bottom" id="wEJ-dV-m4P"/>
@@ -242,12 +242,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGQ-Ua-xIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5449" y="891"/>
+            <point key="canvasLocation" x="6176" y="891"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="5eb-nm-B3X">
             <objects>
-                <viewController restorationIdentifier="GameViewController" storyboardIdentifier="GameViewController" id="qmw-d6-jWO" sceneMemberID="viewController">
+                <viewController restorationIdentifier="GameViewController" storyboardIdentifier="GameViewController" id="qmw-d6-jWO" customClass="GameViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="chq-Hh-PU6"/>
                         <viewControllerLayoutGuide type="bottom" id="LoK-o8-9Zu"/>
@@ -256,23 +256,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqL-Qk-saX">
-                                <rect key="frame" x="489" y="369" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="8sq-UN-CY7">
+                                <rect key="frame" x="104" y="67" width="405" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-qu-7TR">
+                                <rect key="frame" x="516" y="67" width="405" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-O7-Kbg">
+                                <rect key="frame" x="104" y="331" width="405" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="s5O-rj-RqJ">
+                                <rect key="frame" x="516" y="331" width="405" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="fxm-RH-uPO">
+                                <rect key="frame" x="383" y="620" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FF-U4-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3189" y="-16"/>
+            <point key="canvasLocation" x="3188.671875" y="-16.40625"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondPage-->
         <scene sceneID="r4N-GE-eoC">
             <objects>
-                <viewController restorationIdentifier="SecondPageViewController" storyboardIdentifier="SecondPageViewController" id="tVn-Ga-LPJ" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SecondPageViewController" storyboardIdentifier="SecondPageViewController" title="SecondPage" id="tVn-Ga-LPJ" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cRd-0R-X0M"/>
                         <viewControllerLayoutGuide type="bottom" id="iO9-Ku-k7Q"/>
@@ -312,10 +327,10 @@
             </objects>
             <point key="canvasLocation" x="3188.671875" y="890.625"/>
         </scene>
-        <!--View Controller-->
+        <!--ThirdPage-->
         <scene sceneID="HDJ-G1-UhA">
             <objects>
-                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" id="hE0-gY-UkO" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" title="ThirdPage" id="hE0-gY-UkO" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QsB-uh-pA8"/>
                         <viewControllerLayoutGuide type="bottom" id="xZb-yn-0mZ"/>
@@ -360,10 +375,34 @@
             </objects>
             <point key="canvasLocation" x="3943.9453124999995" y="890.625"/>
         </scene>
-        <!--View Controller-->
+        <!--FifthPage-->
+        <scene sceneID="y3U-gf-TrK">
+            <objects>
+                <viewController restorationIdentifier="FifthPageViewController" storyboardIdentifier="FifthPageViewController" title="FifthPage" id="yB9-eq-xGu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZoR-su-CbS"/>
+                        <viewControllerLayoutGuide type="bottom" id="VBK-Vk-MwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rMV-DP-TV3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blankoBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="lXw-Am-bBe">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJj-mR-szD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5416" y="891"/>
+        </scene>
+        <!--FourthPage-->
         <scene sceneID="rEb-ry-4h3">
             <objects>
-                <viewController restorationIdentifier="FourthPageViewController" storyboardIdentifier="FourthPageViewController" id="ii2-Wg-FOw" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FourthPageViewController" storyboardIdentifier="FourthPageViewController" title="FourthPage" id="ii2-Wg-FOw" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fG3-uS-tdF"/>
                         <viewControllerLayoutGuide type="bottom" id="nd9-BB-bKc"/>
@@ -414,9 +453,11 @@
         <image name="animalFeedMoon" width="405" height="532"/>
         <image name="animalFeedStar" width="449" height="532"/>
         <image name="blankoBackground2" width="1280" height="960"/>
+        <image name="cloud-transparent" width="616" height="425"/>
         <image name="farmer" width="656" height="1035"/>
         <image name="fee" width="891" height="987"/>
         <image name="feeWithOpenhair" width="804" height="934"/>
+        <image name="grass-2" width="1280" height="800"/>
         <image name="landscape" width="1267" height="712"/>
         <image name="play" width="84" height="84"/>
         <image name="tree" width="4992" height="4478"/>

@@ -26,6 +26,7 @@ class TransitionGameViewController: UIViewController {
     }
 
     func positionAnimal(nameOfImage:NSString, countOfAnimal:Int, widthOfImage: CGFloat, heightOfImage: CGFloat) {
+        //TODO: min. distance neccessary
         let x = self.randomViewofAnimal.frame.origin.x
         let y = self.randomViewofAnimal.frame.origin.y
         for index in 0 ..< countOfAnimal {

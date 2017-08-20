@@ -15,6 +15,7 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
                 self.VCInstance(name: "SecondPageViewController"),
                 self.VCInstance(name: "ThirdPageViewController"),
                 self.VCInstance(name: "FourthPageViewController"),
+                self.VCInstance(name: "FifthPageViewController"),
                 self.VCInstance(name: "TransitionPageViewController")]
     }()
     
