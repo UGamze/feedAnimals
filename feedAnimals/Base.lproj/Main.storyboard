@@ -257,28 +257,71 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="8sq-UN-CY7">
-                                <rect key="frame" x="104" y="67" width="405" height="256"/>
+                                <rect key="frame" x="104" y="67" width="405" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-qu-7TR">
-                                <rect key="frame" x="516" y="67" width="405" height="256"/>
+                                <rect key="frame" x="516" y="67" width="405" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="Aih-O7-Kbg">
-                                <rect key="frame" x="104" y="331" width="405" height="256"/>
+                                <rect key="frame" x="104" y="329" width="405" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grass-2" translatesAutoresizingMaskIntoConstraints="NO" id="s5O-rj-RqJ">
-                                <rect key="frame" x="516" y="331" width="405" height="256"/>
+                                <rect key="frame" x="516" y="329" width="405" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wood-dark" translatesAutoresizingMaskIntoConstraints="NO" id="gQQ-BX-mf4">
+                                <rect key="frame" x="104" y="540" width="405" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wood-dark" translatesAutoresizingMaskIntoConstraints="NO" id="f6M-4p-Z2K">
+                                <rect key="frame" x="516" y="540" width="405" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-R9-SCB">
+                                <rect key="frame" x="104" y="67" width="404" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Press to pos. &amp; feed animals-Moon" backgroundImage="transparent">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="Q8Z-8J-MwI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruB-PY-VtI">
+                                <rect key="frame" x="517" y="67" width="404" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Press to pos.&amp; feed animals-Star" backgroundImage="transparent">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="NBX-jS-cdd"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="fxm-RH-uPO">
-                                <rect key="frame" x="383" y="620" width="240" height="128"/>
+                                <rect key="frame" x="388" y="670" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cloud" destination="fxm-RH-uPO" id="u4e-NX-P9x"/>
+                        <outlet property="dropImageMoon" destination="gQQ-BX-mf4" id="7EV-YA-5rv"/>
+                        <outlet property="dropImageStar" destination="f6M-4p-Z2K" id="TjL-Qy-d9E"/>
+                        <outlet property="firstFarmArea" destination="8sq-UN-CY7" id="Oq4-zq-1vQ"/>
+                        <outlet property="fourthFarmArea" destination="s5O-rj-RqJ" id="0A1-Nv-4AW"/>
+                        <outlet property="overlayLeft" destination="cFe-R9-SCB" id="5GT-2J-3Uc"/>
+                        <outlet property="overlayRight" destination="ruB-PY-VtI" id="Ifz-4a-S7N"/>
+                        <outlet property="secondFarmArea" destination="Aih-O7-Kbg" id="CBX-u4-YjL"/>
+                        <outlet property="thirdFarmArea" destination="fEI-qu-7TR" id="447-4z-Kaw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FF-U4-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,7 +503,9 @@
         <image name="grass-2" width="1280" height="800"/>
         <image name="landscape" width="1267" height="712"/>
         <image name="play" width="84" height="84"/>
+        <image name="transparent" width="1500" height="841"/>
         <image name="tree" width="4992" height="4478"/>
+        <image name="wood-dark" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="avn-Rt-NNn"/>

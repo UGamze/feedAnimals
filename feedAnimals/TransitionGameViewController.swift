@@ -29,7 +29,7 @@ class TransitionGameViewController: UIViewController {
         //TODO: min. distance neccessary
         let x = self.randomViewofAnimal.frame.origin.x
         let y = self.randomViewofAnimal.frame.origin.y
-        for index in 0 ..< countOfAnimal {
+        for _ in 0 ..< countOfAnimal {
             //create and position cow
             let imageView = UIImageView(image: UIImage(named: nameOfImage as String)!)
             imageView.frame = CGRect(
@@ -40,7 +40,6 @@ class TransitionGameViewController: UIViewController {
                 height: heightOfImage)
             
             view.addSubview(imageView)
-            print(index)
         }
         self.farmer.isUserInteractionEnabled = false
     }
