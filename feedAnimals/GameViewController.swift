@@ -29,6 +29,10 @@ class GameViewController: UIViewController{
     
     @IBOutlet weak var overlayLeft: UIButton!
     @IBOutlet weak var overlayRight: UIButton!
+    
+    @IBOutlet weak var overlayButtonRStar: UIButton!
+    @IBOutlet weak var overlayButtonLMoon: UIButton!
+    
 
     // for touch functions
     var moonImageView = UIImageView()
@@ -46,21 +50,26 @@ class GameViewController: UIViewController{
     override func viewDidLoad() {
       
         super.viewDidLoad()
-    
     }
     
     @IBAction func pressOverlay(_ sender: UIButton) {
-        if sender == overlayRight {
+        if sender == overlayButtonRStar {
             animalStarArr = gameSettingsAnimal(xStart: 464, animalCount: 6, animalName: "sadCow.jpg")
             overlayRight.isHidden = true
+            
+            /*mit alpha wird es transparent-> isEnabled setzt es ebenfalls auf transparent
+            overlayButtonRStar.alpha = 0.5*/
+            
+            overlayButtonRStar.isEnabled = false
             self.starImageView = UIImageView(image: UIImage(named: "barn-star.jpg"))
             starImageView.frame = CGRect(x: 420, y: 640, width: 200, height: 120)
             view.addSubview(starImageView)
                
         }
-        if sender == overlayLeft {
+        if sender == overlayButtonLMoon {
             animalMoonArr = gameSettingsAnimal(xStart: 45, animalCount: 6, animalName: "sadCow.jpg")
             overlayLeft.isHidden = true
+            overlayButtonLMoon.isEnabled = false
             self.moonImageView = UIImageView(image: UIImage(named: "barn-moon.jpg"))
             moonImageView.frame = CGRect(x: 420, y: 640, width: 200, height: 120)
             view.addSubview(moonImageView)
@@ -122,7 +131,6 @@ class GameViewController: UIViewController{
                 }
             }
         }
-
     }
     
     //3
@@ -130,7 +138,7 @@ class GameViewController: UIViewController{
         for touch in (touches){
             let location = touch.location(in: self.view)
             var counter : CGFloat = -160
-            if starImageView.frame.contains(location){
+            if (starImageView.frame.contains(location)) && (isStarTouchEnded == false){
                 starImageView.isHidden = true
                 for _ in 0...4 {
                     self.starImageView = UIImageView(image: UIImage(named: "barn-star.jpg"))
@@ -147,7 +155,8 @@ class GameViewController: UIViewController{
                 }
                 feedAnimals(animals: animalStarArr, barns: barnStarArr)
                 
-            }else{
+            }
+            if (moonImageView.frame.contains(location)) && (isMoonTouchEnded == false){
                 moonImageView.isHidden = true
                 for _ in 0...4 {
                     self.moonImageView = UIImageView(image: UIImage(named: "barn-moon.jpg"))
@@ -158,7 +167,7 @@ class GameViewController: UIViewController{
                     view.addSubview(moonImageView)
                     barnMoonArr.append(moonImageView)
                     moonImageView.superview?.bringSubview(toFront: cloud)
-                    isStarTouchEnded = true
+                    isMoonTouchEnded = true
                     counter += 80
                     
                 }
@@ -171,8 +180,7 @@ class GameViewController: UIViewController{
         let animalImg = ["happyCow.jpg","happyCowMouth.jpg","happyCow.jpg"]
         var images = [UIImage]()
         
-        for i in 0..<animalImg.count
-        {
+        for i in 0..<animalImg.count{
             images.append(UIImage(named: animalImg[i])!)
         }
         for i in animals{

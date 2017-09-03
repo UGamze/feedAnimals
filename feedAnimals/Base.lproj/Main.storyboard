@@ -286,28 +286,38 @@
                                 <rect key="frame" x="104" y="67" width="404" height="520"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Press to pos. &amp; feed animals-Moon" backgroundImage="transparent">
+                                <state key="normal" backgroundImage="transparent">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="Q8Z-8J-MwI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruB-PY-VtI">
                                 <rect key="frame" x="517" y="67" width="404" height="520"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Press to pos.&amp; feed animals-Star" backgroundImage="transparent">
+                                <state key="normal" backgroundImage="transparent">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="NBX-jS-cdd"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="fxm-RH-uPO">
                                 <rect key="frame" x="388" y="670" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUE-pF-taD">
+                                <rect key="frame" x="250" y="257" width="112" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="moon"/>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="yJm-Zd-Qlm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-I5-Aiy">
+                                <rect key="frame" x="635" y="232" width="168" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="star"/>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="g5P-kb-6C0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -317,6 +327,8 @@
                         <outlet property="dropImageStar" destination="f6M-4p-Z2K" id="TjL-Qy-d9E"/>
                         <outlet property="firstFarmArea" destination="8sq-UN-CY7" id="Oq4-zq-1vQ"/>
                         <outlet property="fourthFarmArea" destination="s5O-rj-RqJ" id="0A1-Nv-4AW"/>
+                        <outlet property="overlayButtonLMoon" destination="VUE-pF-taD" id="SVS-2t-zOQ"/>
+                        <outlet property="overlayButtonRStar" destination="QvI-I5-Aiy" id="ju6-aN-06L"/>
                         <outlet property="overlayLeft" destination="cFe-R9-SCB" id="5GT-2J-3Uc"/>
                         <outlet property="overlayRight" destination="ruB-PY-VtI" id="Ifz-4a-S7N"/>
                         <outlet property="secondFarmArea" destination="Aih-O7-Kbg" id="CBX-u4-YjL"/>
@@ -502,7 +514,9 @@
         <image name="feeWithOpenhair" width="804" height="934"/>
         <image name="grass-2" width="1280" height="800"/>
         <image name="landscape" width="1267" height="712"/>
+        <image name="moon" width="112" height="140"/>
         <image name="play" width="84" height="84"/>
+        <image name="star" width="168" height="191"/>
         <image name="transparent" width="1500" height="841"/>
         <image name="tree" width="4992" height="4478"/>
         <image name="wood-dark" width="800" height="531"/>
