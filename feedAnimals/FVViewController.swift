@@ -27,15 +27,15 @@ class FVViewController: UIViewController {
     @IBAction func sVCstartAmination(_ sender: UIButton) {
         animateView(objectFarmer: sVCanimatedFarmer)
         createSpeechBubbleText(textForSpeech:"... und ich hab ein Bauernhof mit vielen Tieren: Kühen, Enten, Hasen usw.", nameOfImage: "speechBubble")
-        animateView(objectFarmer: insertNewObject(name: "cow", rec: CGRect(x: 850, y: 480, width: 160, height: 200)))
+        animateView(objectFarmer: insertNewObject(name: "Sheep_body_happy_color", rec: CGRect(x: 750, y: 525, width: 160, height: 170)))
         
-        animateView(objectFarmer: insertNewObject(name: "sheep", rec: CGRect(x: 710, y: 525, width: 150, height: 150)))
+        animateView(objectFarmer: insertNewObject(name: "Cow_body_happy_color", rec: CGRect(x: 850, y: 480, width: 200, height: 250)))
         
-        animateView(objectFarmer: insertNewObject(name: "cat", rec: CGRect(x: 510, y: 525, width: 120, height: 150)))
+        animateView(objectFarmer: insertNewObject(name: "Cat_body_happy_color", rec: CGRect(x: 495, y: 515, width: 120, height: 200)))
         
-        animateView(objectFarmer: insertNewObject(name: "chicken", rec: CGRect(x: 650, y: 600, width: 150, height: 150)))
+        animateView(objectFarmer: insertNewObject(name: "Chicken_body_happy_color", rec: CGRect(x: 660, y: 570, width: 140, height: 200)))
         
-        animateView(objectFarmer: insertNewObject(name: "bunny", rec: CGRect(x: 780, y: 600, width: 120, height: 150)))
+        animateView(objectFarmer: insertNewObject(name: "Rabbit_body_happy_color", rec: CGRect(x: 570, y: 570, width: 120, height: 200)))
     }
     
     //Objects for thirdVC

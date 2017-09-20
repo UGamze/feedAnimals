@@ -91,23 +91,23 @@ class GameViewController: UIViewController{
     
     @IBAction func pressOverlay(_ sender: UIButton) {
         if sender == overlayButtonRStar {
-            animalStarArr = gameSettingsAnimal(xStart: 464, animalCount: 6, animalName: "sadCow.jpg")
+            animalStarArr = gameSettingsAnimal(xStart: 464, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.sadAnimalImg as String)
             overlayRight.isHidden = true
             
             /*mit alpha wird es transparent-> isEnabled setzt es ebenfalls auf transparent
             overlayButtonRStar.alpha = 0.5*/
             
             overlayButtonRStar.isEnabled = false
-            self.starImageView = UIImageView(image: UIImage(named: "barn-star.jpg"))
+            self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
             starImageView.frame = CGRect(x: 420, y: 640, width: 200, height: 120)
             view.addSubview(starImageView)
                
         }
         if sender == overlayButtonLMoon {
-            animalMoonArr = gameSettingsAnimal(xStart: 45, animalCount: 6, animalName: "sadCow.jpg")
+            animalMoonArr = gameSettingsAnimal(xStart: 45, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.sadAnimalImg as String)
             overlayLeft.isHidden = true
             overlayButtonLMoon.isEnabled = false
-            self.moonImageView = UIImageView(image: UIImage(named: "barn-moon.jpg"))
+            self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
             moonImageView.frame = CGRect(x: 420, y: 640, width: 200, height: 120)
             view.addSubview(moonImageView)
         }
@@ -178,7 +178,7 @@ class GameViewController: UIViewController{
             if (starImageView.frame.contains(location)) && (isStarTouchEnded == false){
                 starImageView.isHidden = true
                 for _ in 0...4 {
-                    self.starImageView = UIImageView(image: UIImage(named: "barn-star.jpg"))
+                    self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
                     starImageView.frame.size.width = 80
                     starImageView.frame.size.height = 40
                     starImageView.center.x = (dropImageStar.center.x + counter)
@@ -196,7 +196,7 @@ class GameViewController: UIViewController{
             if (moonImageView.frame.contains(location)) && (isMoonTouchEnded == false){
                 moonImageView.isHidden = true
                 for _ in 0...4 {
-                    self.moonImageView = UIImageView(image: UIImage(named: "barn-moon.jpg"))
+                    self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
                     moonImageView.frame.size.width = 80
                     moonImageView.frame.size.height = 40
                     moonImageView.center.x = (dropImageMoon.center.x + counter)
@@ -214,7 +214,7 @@ class GameViewController: UIViewController{
     }
  
     func feedAnimals(animals: [UIImageView], food: [UIImageView]) {
-        let animalImg = ["happyCow.jpg","happyCowMouth.jpg","happyCow.jpg"]
+        let animalImg = [thisLevel.happyAnimalImg,thisLevel.withMouthAnimalImg,thisLevel.happyAnimalImg]
         var images = [UIImage]()
         
         for i in 0..<animalImg.count{
