@@ -13,6 +13,7 @@ class TransitionGameViewController: UIViewController {
     
     @IBOutlet weak var randomViewofAnimal: UIImageView!
     @IBOutlet weak var farmer: UIButton!
+    var myInt: Int = 0
 
     @IBAction func touchFarmer(_ sender: UIButton) {
         positionAnimal(nameOfImage: "cow", countOfAnimal: 6, widthOfImage: 80.0, heightOfImage: 160.0)
@@ -58,9 +59,9 @@ class TransitionGameViewController: UIViewController {
     }
     
     func buttonAction(sender: UIButton!) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "GameViewController")
-        self.navigationController?.pushViewController(vc, animated: true)
+        if myInt != nil {
+            performSegue(withIdentifier: "getSegue", sender: self)
+        }
     }
     
     //function for ramdom Position
@@ -77,6 +78,12 @@ class TransitionGameViewController: UIViewController {
         
         return position
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewcontroller = segue.destination as! GameViewController
+        viewcontroller.levelID = myInt
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

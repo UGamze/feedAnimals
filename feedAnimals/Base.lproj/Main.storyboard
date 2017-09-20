@@ -238,6 +238,7 @@
                     <connections>
                         <outlet property="farmer" destination="q58-KB-Z7M" id="q8D-XM-gWP"/>
                         <outlet property="randomViewofAnimal" destination="WqX-pf-aEI" id="11d-Yd-e71"/>
+                        <segue destination="qmw-d6-jWO" kind="show" identifier="getSegue" id="V91-07-TyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGQ-Ua-xIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,6 +319,14 @@
                                     <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="g5P-kb-6C0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoa-rD-2Wp">
+                                <rect key="frame" x="875" y="670" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fertig"/>
+                                <connections>
+                                    <action selector="changeLevel:" destination="qmw-d6-jWO" eventType="touchUpInside" id="DFh-5g-bDV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -333,6 +342,7 @@
                         <outlet property="overlayRight" destination="ruB-PY-VtI" id="Ifz-4a-S7N"/>
                         <outlet property="secondFarmArea" destination="Aih-O7-Kbg" id="CBX-u4-YjL"/>
                         <outlet property="thirdFarmArea" destination="fEI-qu-7TR" id="447-4z-Kaw"/>
+                        <segue destination="aaa-Rt-oVu" kind="show" identifier="setSegue" id="PPA-He-7hD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FF-U4-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,6 +391,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fev-2v-25q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3188.671875" y="890.625"/>
+        </scene>
+        <!--Summary Game View Controller-->
+        <scene sceneID="xk4-Rh-l93">
+            <objects>
+                <viewController restorationIdentifier="SummaryGameViewController" storyboardIdentifier="SummaryGameViewController" id="HEg-ai-KvV" customClass="SummaryGameViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h2x-AJ-HJL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvv-JT-4IX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xRu-Up-gCf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENDE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUm-Ei-Dnf">
+                                <rect key="frame" x="488" y="374" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="im9-Wk-1ZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3943.9453124999995" y="-16.40625"/>
         </scene>
         <!--ThirdPage-->
         <scene sceneID="HDJ-G1-UhA">

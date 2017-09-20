@@ -20,6 +20,9 @@
 		FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069FA31F16930100058D03 /* SelectTaskViewController.swift */; };
 		FA3152B71F442DFB008BC81A /* TransitionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */; };
 		FA479F6B1F403D2300475274 /* FVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA479F6A1F403D2300475274 /* FVViewController.swift */; };
+		FA5D8FEA1F72A163002959DC /* JSONTestLevel.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5D8FE91F72A163002959DC /* JSONTestLevel.json */; };
+		FA5D8FEC1F72A39D002959DC /* SummaryGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */; };
+		FAAB18FA1F5BE33400FB20DD /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB18F91F5BE33400FB20DD /* Level.swift */; };
 		FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */; };
 		FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAE3BE981F35A18F000FFE1B /* GameScene.sks */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,9 @@
 		FA069FA31F16930100058D03 /* SelectTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTaskViewController.swift; sourceTree = "<group>"; };
 		FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionGameViewController.swift; sourceTree = "<group>"; };
 		FA479F6A1F403D2300475274 /* FVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FVViewController.swift; sourceTree = "<group>"; };
+		FA5D8FE91F72A163002959DC /* JSONTestLevel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONTestLevel.json; sourceTree = "<group>"; };
+		FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryGameViewController.swift; sourceTree = "<group>"; };
+		FAAB18F91F5BE33400FB20DD /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		FAE3BE981F35A18F000FFE1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,11 +125,14 @@
 				FA479F6A1F403D2300475274 /* FVViewController.swift */,
 				FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */,
 				FA069F731F16499400058D03 /* GameViewController.swift */,
+				FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */,
+				FAAB18F91F5BE33400FB20DD /* Level.swift */,
 				FA069F6B1F16499400058D03 /* AppDelegate.swift */,
 				FA069F751F16499400058D03 /* Main.storyboard */,
 				FA069F781F16499400058D03 /* Assets.xcassets */,
 				FA069F7A1F16499400058D03 /* LaunchScreen.storyboard */,
 				FA069F711F16499400058D03 /* GameScene.swift */,
+				FA5D8FE91F72A163002959DC /* JSONTestLevel.json */,
 				FA069F7D1F16499400058D03 /* Info.plist */,
 				FA069F6F1F16499400058D03 /* Actions.sks */,
 				FAE3BE981F35A18F000FFE1B /* GameScene.sks */,
@@ -259,6 +268,7 @@
 			files = (
 				FA069F771F16499400058D03 /* Main.storyboard in Resources */,
 				FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */,
+				FA5D8FEA1F72A163002959DC /* JSONTestLevel.json in Resources */,
 				FA069F791F16499400058D03 /* Assets.xcassets in Resources */,
 				FA069F7C1F16499400058D03 /* LaunchScreen.storyboard in Resources */,
 				FA069F701F16499400058D03 /* Actions.sks in Resources */,
@@ -289,8 +299,10 @@
 				FA479F6B1F403D2300475274 /* FVViewController.swift in Sources */,
 				FA069FA41F16930100058D03 /* SelectTaskViewController.swift in Sources */,
 				FA069F721F16499400058D03 /* GameScene.swift in Sources */,
+				FA5D8FEC1F72A39D002959DC /* SummaryGameViewController.swift in Sources */,
 				FA069FA21F168B4300058D03 /* StartViewController.swift in Sources */,
 				FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */,
+				FAAB18FA1F5BE33400FB20DD /* Level.swift in Sources */,
 				FA3152B71F442DFB008BC81A /* TransitionGameViewController.swift in Sources */,
 				FA069F741F16499400058D03 /* GameViewController.swift in Sources */,
 				FA069F6C1F16499400058D03 /* AppDelegate.swift in Sources */,
