@@ -9,6 +9,8 @@
 import UIKit
 
 class Level: NSObject {
+    var animalName = String()
+    var animalWithBody = String()
     var foodMoonImg = String()
     var foodStarImg = String()
     var happyAnimalImg = String()
@@ -22,8 +24,10 @@ class Level: NSObject {
     var withMouthAnimalImg = String()
     
     
-    init(foodMoonImg: String, foodStarImg: String, happyAnimalImg: String, numberAnimalMoon: Int, numberAnimalStar: Int, numberLuckyMoon: Int, numberLuckyStar: Int, numberUnluckyMoon: Int, numberUnluckyStar: Int, sadAnimalImg: String, withMouthAnimalImg: String) {
+    init(animalName: String, animalWithBody: String, foodMoonImg: String, foodStarImg: String, happyAnimalImg: String, numberAnimalMoon: Int, numberAnimalStar: Int, numberLuckyMoon: Int, numberLuckyStar: Int, numberUnluckyMoon: Int, numberUnluckyStar: Int, sadAnimalImg: String, withMouthAnimalImg: String) {
         
+        self.animalName = animalName
+        self.animalWithBody = animalWithBody
         self.foodMoonImg = foodMoonImg
         self.foodStarImg = foodStarImg
         self.happyAnimalImg = happyAnimalImg

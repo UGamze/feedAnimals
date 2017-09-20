@@ -61,109 +61,32 @@ class GameViewController: UIViewController{
     var sadAnimalImg = String()
     var withMouthAnimalImg = String()
     
+    var thisLevel: Level!
     var levelID = Int()
-    var actualLevel : Level!
-    
-    // Save the Levels here
-    var allLevel = [Level]()
+    var allLevelCount = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.thisLevel.happyAnimalImg)
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        // Set up the URL request
-        guard let fileUrl = Bundle.main.path(forResource: "JSONTestLevel", ofType: "json")else{
-            print("Error: fileUrl")
-            return
-        }
-        let url = URL(fileURLWithPath: fileUrl)
-        
-        // set up the session
-        let session = URLSession.shared
-        
-        // make the request
-        let task = session.dataTask(with: url) { (data, response, error) in
-            guard error == nil else {
-                print("error calling task")
-                return
-            }
-            // make sure we got data
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                return
-            }
-            
-            do{
-                let myjson = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.mutableContainers) as! [AnyObject]
-                //print(myjson)
-                
-                for level in myjson{
-                    guard let levelDict = level as? [String: Any] else {return}
-                    guard let foodMoonImg = levelDict["foodMoonImg"] as? String else {return}
-                    guard let foodStarImg = levelDict["foodStarImg"] as? String else {return}
-                    guard let happyAnimalImg = levelDict["happyAnimalImg"] as? String else {return}
-                    guard let numberAnimalMoon = levelDict["numberAnimalMoon"] as? Int else {return}
-                    guard let numberAnimalStar = levelDict["numberAnimalStar"] as? Int else {return}
-                    guard let numberLuckyMoon = levelDict["numberLuckyMoon"] as? Int else {return}
-                    guard let numberLuckyStar = levelDict["numberLuckyStar"] as? Int else {return}
-                    guard let numberUnluckyMoon = levelDict["numberUnluckyMoon"] as? Int else {return}
-                    guard let numberUnluckyStar = levelDict["numberUnluckyStar"] as? Int else {return}
-                    guard let sadAnimalImg = levelDict["sadAnimalImg"] as? String else {return}
-                    guard let withMouthAnimalImg = levelDict["withMouthAnimalImg"] as? String else {return}
-                    
-                    self.allLevel.append(Level(foodMoonImg: foodMoonImg, foodStarImg: foodStarImg, happyAnimalImg: happyAnimalImg, numberAnimalMoon: numberAnimalMoon, numberAnimalStar: numberAnimalStar, numberLuckyMoon: numberLuckyMoon, numberLuckyStar: numberLuckyStar, numberUnluckyMoon: numberUnluckyMoon, numberUnluckyStar: numberUnluckyStar, sadAnimalImg: sadAnimalImg, withMouthAnimalImg: withMouthAnimalImg))
-                    
-                }
-                
-                /*for level in self.allLevel {
-                 print(level.foodMoonImg)
-                 print(level.foodStarImg)
-                 print(level.happyAnimalImg)
-                 print(level.numberAnimalMoon)
-                 print(level.numberAnimalStar)
-                 print(level.numberLuckyMoon)
-                 print(level.numberLuckyStar)
-                 print(level.numberUnluckyMoon)
-                 print(level.numberUnluckyStar)
-                 print(level.sadAnimalImg)
-                 print(level.withMouthAnimalImg)
-                 }*/
-                
-                self.actualLevel = self.getActualLevel(id: self.levelID)
-                print(self.actualLevel.happyAnimalImg)
-            }
-            catch{
-                //catch error
-            }
-        }
-        task.resume()
-        
-    }
-    
-    func getActualLevel(id: Int) -> Level {
-        let thisLevel = self.allLevel[id]
-        return thisLevel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let thisLevelViewController = segue.destination as! TransitionGameViewController
         thisLevelViewController.myInt = levelID
+        thisLevelViewController.actualLevel = thisLevel
     }
     
     @IBAction func changeLevel(_ sender: UIButton) {
-        
-        if self.levelID < self.allLevel.count-1 {
-            self.levelID = levelID + 1
-            performSegue(withIdentifier: "setSegue", sender: self)
-        }
-        else{
+        self.levelID = levelID + 1
+        if(self.levelID >= allLevelCount){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let gameSummaryViewController = storyBoard.instantiateViewController(withIdentifier: "SummaryGameViewController") as! SummaryGameViewController
             self.present(gameSummaryViewController, animated: true, completion: nil)
         }
-        
-        
+        else{
+            performSegue(withIdentifier: "setSegue", sender: self)
+        }
     }
     
     @IBAction func pressOverlay(_ sender: UIButton) {

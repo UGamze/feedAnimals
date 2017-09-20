@@ -1,6 +1,8 @@
 [
    {
       "id":1,
+      "animalName":"cow",
+      "animalWithBody":"cow.jpg",
       "happyAnimalImg":"happyCow.jpg",
       "sadAnimalImg":"sadCow.jpg",
       "withMouthAnimalImg":"happyCowMouth.jpg",
@@ -14,7 +16,9 @@
       "numberUnluckyStar":6
    },
    {
-      "id":"2",
+      "id":2,
+      "animalName":"cat",
+      "animalWithBody":"cat.jpg",
       "happyAnimalImg":"happyCat.jpg",
       "sadAnimalImg":"sadCat.jpg",
       "withMouthAnimalImg":"happyCatMouth.jpg",
@@ -28,7 +32,9 @@
       "numberUnluckyStar":6
    },
    {
-      "id":"3",
+      "id":3,
+      "animalName":"bunny",
+      "animalWithBody":"bunny.jpg",
       "happyAnimalImg":"happyBunny.jpg",
       "sadAnimalImg":"sadBunny.jpg",
       "withMouthAnimalImg":"happyBunnyMouth.jpg",
@@ -42,10 +48,12 @@
       "numberUnluckyStar":6
    },
    {
-      "id":"4",
-      "happyAnimalImg":"happyDog.jpg",
-      "sadAnimalImg":"sadDog.jpg",
-      "withMouthAnimalImg":"happyDogMouth.jpg",
+      "id":4,
+      "animalName":"chicken",
+      "animalWithBody":"chicken.jpg",
+      "happyAnimalImg":"happyChicken.jpg",
+      "sadAnimalImg":"sadChicken.jpg",
+      "withMouthAnimalImg":"happyChickenMouth.jpg",
       "foodMoonImg":"barn-moon.jpg",
       "foodStarImg":"barn-star.jpg",
       "numberAnimalMoon":6,
