@@ -91,7 +91,7 @@ class GameViewController: UIViewController{
     @IBAction func pressOverlay(_ sender: UIButton) {
         if sender == overlayButtonRStar {
             //464
-            animalStarArr = gameSettingsAnimal(xStart: 505, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.sadAnimalImg as String)
+            animalStarArr = gameSettingsAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.sadAnimalImg as String)
             overlayRight.isHidden = true
             
             /*mit alpha wird es transparent-> isEnabled setzt es ebenfalls auf transparent
@@ -99,17 +99,17 @@ class GameViewController: UIViewController{
             
             overlayButtonRStar.isEnabled = false
             self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
-            starImageView.frame = CGRect(x: 455, y: 670, width: 200, height: 120)
+            starImageView.frame = CGRect(x: 435, y: 640, width: 200, height: 120)
             view.addSubview(starImageView)
                
         }
         if sender == overlayButtonLMoon {
             //45
-            animalMoonArr = gameSettingsAnimal(xStart: 95, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.sadAnimalImg as String)
+            animalMoonArr = gameSettingsAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.sadAnimalImg as String)
             overlayLeft.isHidden = true
             overlayButtonLMoon.isEnabled = false
             self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
-            moonImageView.frame = CGRect(x: 455, y: 670, width: 200, height: 120)
+            moonImageView.frame = CGRect(x: 435, y: 640, width: 200, height: 120)
             view.addSubview(moonImageView)
         }
     }
@@ -220,25 +220,25 @@ class GameViewController: UIViewController{
     func addCheckHappyAnimalButton(nameOfImage:NSString) {
         //210 350
         if (isStarTouchEnded == true) {
-            let button = UIButton(frame: CGRect(x:585, y: 310, width: 350, height: 80))
+            let button = UIButton(frame: CGRect(x:540, y: 310, width: 350, height: 80))
             button.tag = 1
             button.layer.cornerRadius = 40
             button.layer.borderWidth = 2
             button.layer.borderColor = UIColor.gray.cgColor
             button.backgroundColor = UIColor.gray.withAlphaComponent(0.8)
-            button.setTitle("Lass die " + (thisLevel.animalName as String) + "s" + " sortieren", for: .normal)
+            button.setTitle("Lass die " + (thisLevel.animalName as String) + " sortieren", for: .normal)
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
             button.addTarget(self, action: #selector(checkIfAnimalsHappyButton), for: .touchUpInside)
             
             self.view.addSubview(button)
         }else if (isMoonTouchEnded == true){
-            let button = UIButton(frame: CGRect(x:175, y: 310, width: 350, height: 80))
+            let button = UIButton(frame: CGRect(x:130, y: 310, width: 350, height: 80))
             button.tag = 2
             button.layer.cornerRadius = 40
             button.layer.borderWidth = 2
             button.layer.borderColor = UIColor.gray.cgColor
             button.backgroundColor = UIColor.gray.withAlphaComponent(0.8)
-            button.setTitle("Komm Lass die " + (thisLevel.animalName as String) + "s" + " sortieren", for: .normal)
+            button.setTitle("Lass die " + (thisLevel.animalName as String) + " sortieren", for: .normal)
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
             button.addTarget(self, action: #selector(checkIfAnimalsHappyButton), for: .touchUpInside)
             
@@ -256,7 +256,7 @@ class GameViewController: UIViewController{
             for n in 0..<thisLevel.numberLuckyStar{
                 UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                     distance = n * ((462 - 104)/self.thisLevel.numberLuckyStar)
-                    self.animalStarArr[n].frame = CGRect(x: 565 + distance, y: 100, width: 100, height: 80)
+                    self.animalStarArr[n].frame = CGRect(x: 520 + distance, y: 100, width: 100, height: 80)
                     self.animalStarArr[n].image = UIImage(named: self.thisLevel.happyAnimalImg)
                 }, completion: { finished in
                     self.animalStarArr[n].isHidden = false
@@ -268,7 +268,7 @@ class GameViewController: UIViewController{
             for n in 0..<thisLevel.numberLuckyMoon{
                 UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                     distance = n * ((462 - 104)/self.thisLevel.numberLuckyMoon)
-                    self.animalMoonArr[n].frame = CGRect(x: 155 + distance, y: 100, width: 100, height: 80)
+                    self.animalMoonArr[n].frame = CGRect(x: 110 + distance, y: 100, width: 100, height: 80)
                     self.animalMoonArr[n].image = UIImage(named: self.thisLevel.happyAnimalImg)
                 }, completion: { finished in
                     self.animalMoonArr[n].isHidden = false

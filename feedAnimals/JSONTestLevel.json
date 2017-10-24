@@ -1,7 +1,7 @@
 [
    {
       "id":1,
-      "animalName":"cow",
+      "animalName":"Kühe",
       "animalWithBody":"Cow_body_happy_color",
       "happyAnimalImg":"happyCow",
       "sadAnimalImg":"sadCow",
@@ -17,7 +17,7 @@
    },
    {
       "id":2,
-      "animalName":"cat",
+      "animalName":"Katzen",
       "animalWithBody":"Cat_body_happy_color",
       "happyAnimalImg":"happyCat",
       "sadAnimalImg":"sadCat",
@@ -33,7 +33,7 @@
    },
    {
       "id":3,
-      "animalName":"rabbit",
+      "animalName":"Hasen",
       "animalWithBody":"Rabbit_body_happy_color",
       "happyAnimalImg":"happyRabbit",
       "sadAnimalImg":"sadRabbit",
@@ -49,7 +49,7 @@
    },
    {
       "id":4,
-      "animalName":"chicken",
+      "animalName":"Hühner",
       "animalWithBody":"Chicken_body_happy_color",
       "happyAnimalImg":"happyChicken",
       "sadAnimalImg":"sadChicken",

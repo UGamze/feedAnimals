@@ -23,12 +23,12 @@ class TransitionGameViewController: UIViewController {
         positionAnimal(nameOfImage: actualLevel.animalWithBody as NSString, countOfAnimal: actualLevel.numberAnimalMoon + actualLevel.numberAnimalStar, widthOfImage: 80.0, heightOfImage: 160.0)
         //addFeedAnimalButton(nameOfImage: "cow")
 
-        let button = UIButton(frame: CGRect(x:270, y: 350, width: 600, height: 80))
+        let button = UIButton(frame: CGRect(x:230, y: 350, width: 600, height: 80))
         button.layer.cornerRadius = 40
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.gray.cgColor
         button.backgroundColor = UIColor.gray.withAlphaComponent(0.8)
-        button.setTitle("Help me to feed the " + (actualLevel.animalName) + "s" , for: .normal)
+        button.setTitle("Hilf mir die " + (actualLevel.animalName) + " zu füttern" , for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
