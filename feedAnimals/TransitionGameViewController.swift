@@ -23,11 +23,11 @@ class TransitionGameViewController: UIViewController {
         positionAnimal(nameOfImage: actualLevel.animalWithBody as NSString, countOfAnimal: actualLevel.numberAnimalMoon + actualLevel.numberAnimalStar, widthOfImage: 80.0, heightOfImage: 160.0)
         //addFeedAnimalButton(nameOfImage: "cow")
 
-        let button = UIButton(frame: CGRect(x:210, y: 350, width: 600, height: 80))
+        let button = UIButton(frame: CGRect(x:270, y: 350, width: 600, height: 80))
         button.layer.cornerRadius = 40
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor(red: 0.7569, green: 0.3843, blue: 0.0667, alpha: 1.0).cgColor
-        button.backgroundColor = UIColor(red: 0.9451, green: 0.5137, blue: 0.1882, alpha: 1.0)
+        button.layer.borderColor = UIColor.gray.cgColor
+        button.backgroundColor = UIColor.gray.withAlphaComponent(0.8)
         button.setTitle("Help me to feed the " + (actualLevel.animalName) + "s" , for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -116,8 +116,9 @@ class TransitionGameViewController: UIViewController {
         self.farmer.isUserInteractionEnabled = false
     }
     
-    func addFeedAnimalButton(nameOfImage:NSString) {
-        let button = UIButton(frame: CGRect(x:210, y: 350, width: 600, height: 80))
+    /**func addFeedAnimalButton(nameOfImage:NSString) {
+        //210 350
+        let button = UIButton(frame: CGRect(x:450, y: 310, width: 600, height: 80))
         button.layer.cornerRadius = 40
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor(red: 0.7569, green: 0.3843, blue: 0.0667, alpha: 1.0).cgColor
@@ -125,9 +126,9 @@ class TransitionGameViewController: UIViewController {
         button.setTitle("Help me to feed the " + (nameOfImage as String) + "s" , for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
+        //button.center = self.view.center
         self.view.addSubview(button)
-    }
+    }*/
     
     func buttonAction(sender: UIButton!) {
         if self.myInt < self.allLevel.count {

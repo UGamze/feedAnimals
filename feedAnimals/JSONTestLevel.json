@@ -26,10 +26,10 @@
       "foodStarImg":"barn-star",
       "numberAnimalMoon":6,
       "numberAnimalStar":6,
-      "numberLuckyMoon":2,
-      "numberUnluckyMoon":4,
-      "numberLuckyStar":0,
-      "numberUnluckyStar":6
+      "numberLuckyMoon":1,
+      "numberUnluckyMoon":5,
+      "numberLuckyStar":4,
+      "numberUnluckyStar":2
    },
    {
       "id":3,
@@ -42,10 +42,10 @@
       "foodStarImg":"barn-star",
       "numberAnimalMoon":6,
       "numberAnimalStar":6,
-      "numberLuckyMoon":2,
-      "numberUnluckyMoon":4,
-      "numberLuckyStar":0,
-      "numberUnluckyStar":6
+      "numberLuckyMoon":5,
+      "numberUnluckyMoon":1,
+      "numberLuckyStar":3,
+      "numberUnluckyStar":3
    },
    {
       "id":4,
@@ -58,9 +58,9 @@
       "foodStarImg":"barn-star",
       "numberAnimalMoon":6,
       "numberAnimalStar":6,
-      "numberLuckyMoon":2,
-      "numberUnluckyMoon":4,
-      "numberLuckyStar":0,
-      "numberUnluckyStar":6
+      "numberLuckyMoon":3,
+      "numberUnluckyMoon":3,
+      "numberLuckyStar":5,
+      "numberUnluckyStar":1
    }
 ]
