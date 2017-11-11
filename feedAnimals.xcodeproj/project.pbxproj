@@ -22,6 +22,7 @@
 		FA479F6B1F403D2300475274 /* FVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA479F6A1F403D2300475274 /* FVViewController.swift */; };
 		FA5D8FEA1F72A163002959DC /* JSONTestLevel.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5D8FE91F72A163002959DC /* JSONTestLevel.json */; };
 		FA5D8FEC1F72A39D002959DC /* SummaryGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */; };
+		FA886A151FB7A30700BDE78B /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA886A141FB7A30600BDE78B /* Animation.swift */; };
 		FAAB18FA1F5BE33400FB20DD /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB18F91F5BE33400FB20DD /* Level.swift */; };
 		FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */; };
 		FAE3BE991F35A18F000FFE1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAE3BE981F35A18F000FFE1B /* GameScene.sks */; };
@@ -66,6 +67,7 @@
 		FA479F6A1F403D2300475274 /* FVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FVViewController.swift; sourceTree = "<group>"; };
 		FA5D8FE91F72A163002959DC /* JSONTestLevel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONTestLevel.json; sourceTree = "<group>"; };
 		FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryGameViewController.swift; sourceTree = "<group>"; };
+		FA886A141FB7A30600BDE78B /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FAAB18F91F5BE33400FB20DD /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		FAE3BE981F35A18F000FFE1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				FA069FA31F16930100058D03 /* SelectTaskViewController.swift */,
 				FACC9FB31F3C6D3600BFFDA2 /* PageContentViewController.swift */,
 				FA479F6A1F403D2300475274 /* FVViewController.swift */,
+				FA886A141FB7A30600BDE78B /* Animation.swift */,
 				FA3152B61F442DFB008BC81A /* TransitionGameViewController.swift */,
 				FA069F731F16499400058D03 /* GameViewController.swift */,
 				FA5D8FEB1F72A39D002959DC /* SummaryGameViewController.swift */,
@@ -304,6 +307,7 @@
 				FACC9FB41F3C6D3600BFFDA2 /* PageContentViewController.swift in Sources */,
 				FAAB18FA1F5BE33400FB20DD /* Level.swift in Sources */,
 				FA3152B71F442DFB008BC81A /* TransitionGameViewController.swift in Sources */,
+				FA886A151FB7A30700BDE78B /* Animation.swift in Sources */,
 				FA069F741F16499400058D03 /* GameViewController.swift in Sources */,
 				FA069F6C1F16499400058D03 /* AppDelegate.swift in Sources */,
 			);

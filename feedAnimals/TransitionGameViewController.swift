@@ -34,6 +34,7 @@ class TransitionGameViewController: UIViewController {
         
         self.view.addSubview(button)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,7 +137,7 @@ class TransitionGameViewController: UIViewController {
         }
     }
     
-    //function for ramdom Position
+    /*function for ramdom Position
     func spawnRandomPosition() -> Int{
         let position = Int()
         let height = self.view!.frame.height
@@ -149,7 +150,8 @@ class TransitionGameViewController: UIViewController {
         sprite.position = randomPosition
         
         return position
-    }
+    }*/
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewcontroller = segue.destination as! GameViewController

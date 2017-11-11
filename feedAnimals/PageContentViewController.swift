@@ -9,6 +9,7 @@
 import UIKit
 
 class PageContentViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    var tTime: Timer!
     
     lazy var VCArr: [UIViewController] = {
         return [self.VCInstance(name: "FirstPageViewController"),
@@ -28,7 +29,6 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         self.delegate = self
         self.dataSource = self
         
-        
         //to change the color of dots / pageIndicator
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGray
@@ -36,10 +36,10 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         
         
         if let firstVC = VCArr.first{
-            
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-            
         }
+        //set timer for change Slide
+        tTime = Timer.scheduledTimer(timeInterval: 8, target: self, selector: #selector(changeSlide), userInfo: nil, repeats: true)
     }
 
     override func viewDidLayoutSubviews() {
@@ -50,7 +50,6 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
                 view.frame = UIScreen.main.bounds
             }else if view is UIPageControl{
                 view.backgroundColor = UIColor.clear
-                
             }
         }
     }
@@ -77,9 +76,6 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         }
         
         return VCArr[previousIndex]
-        
-        
-        
     }
     
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
@@ -103,22 +99,29 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
     }
     
     public func presentationCount(for pageViewController: UIPageViewController) -> Int{
-        
         return VCArr.count
-        
     }
     
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int{
-
         guard let firstViewController = viewControllers?.first,
             let firstViewControllerIndex = VCArr.index(of: firstViewController) else{
-                
                 return 0
         }
-
-        
         return firstViewControllerIndex
-        
     }
     
+    var index = 0
+    // change to the next Slide
+    // nur einmal pro View Controller aufruf
+    func changeSlide() {
+        if index < self.VCArr.count {
+            print("Change Slide")
+            setViewControllers([VCArr[index]], direction: .forward, animated: true, completion: nil)
+            index = index+1
+        }
+        /*else {
+            index = 0
+            return
+        }*/
+    }
 }

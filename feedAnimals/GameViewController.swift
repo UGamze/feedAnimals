@@ -10,6 +10,9 @@ import UIKit
 
 
 class GameViewController: UIViewController{
+    // for animation
+    var animationObj = Animation()
+    
     // left top
     @IBOutlet weak var firstFarmArea: UIImageView!
     
@@ -67,8 +70,11 @@ class GameViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animationObj.pulsate(objectButton:overlayButtonRStar)
+        animationObj.pulsate(objectButton:overlayButtonLMoon)
         // Do any additional setup after loading the view, typically from a nib.
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let thisLevelViewController = segue.destination as! TransitionGameViewController
@@ -188,6 +194,7 @@ class GameViewController: UIViewController{
                     foodStarArr.append(starImageView)
                     starImageView.superview?.bringSubview(toFront: cloud)
                     isStarTouchEnded = true
+                    //overlayButtonRStar.isEnabled = true
                     counter += 80
                     
                 }
@@ -206,6 +213,7 @@ class GameViewController: UIViewController{
                     foodMoonArr.append(moonImageView)
                     moonImageView.superview?.bringSubview(toFront: cloud)
                     isMoonTouchEnded = true
+                    //overlayButtonLMoon.isEnabled = true
                     counter += 80
                     
                 }
@@ -241,12 +249,12 @@ class GameViewController: UIViewController{
             button.setTitle("Lass die " + (thisLevel.animalName as String) + " sortieren", for: .normal)
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
             button.addTarget(self, action: #selector(checkIfAnimalsHappyButton), for: .touchUpInside)
-            
+
             self.view.addSubview(button)
         }
         
     }
-    
+    // if click the button to sort the animals
     func checkIfAnimalsHappyButton(sender: UIButton!) {
         var distance = 0
   
@@ -263,6 +271,9 @@ class GameViewController: UIViewController{
                 })
             }
             sender.isHidden = true
+            if(overlayButtonLMoon.isEnabled == true){
+                animationObj.pulsate(objectButton: overlayButtonLMoon)
+            }
             break
         case 2:    //when button.tag = 2 Moon is clicked...
             for n in 0..<thisLevel.numberLuckyMoon{
@@ -275,6 +286,9 @@ class GameViewController: UIViewController{
                 })
             }
             sender.isHidden = true
+            if(overlayButtonRStar.isEnabled == true){
+                animationObj.pulsate(objectButton: overlayButtonRStar)
+            }
             break
         default:
             break
@@ -297,7 +311,6 @@ class GameViewController: UIViewController{
             i.animationRepeatCount = 5
             i.startAnimating()
         }
-        
         
         for n in food{
             //n.isHidden = false

@@ -91,19 +91,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="u43-GD-mcj">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="SgW-Bw-3RH">
-                                <rect key="frame" x="585" y="452" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la4-0d-3tq">
+                                <rect key="frame" x="588" y="318" width="230" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8U-5g-vts">
-                                <rect key="frame" x="461" y="691" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Speaking"/>
+                                <state key="normal" title="Button" image="farmer"/>
                                 <connections>
-                                    <action selector="startAnimation:" destination="he6-da-gHb" eventType="touchUpInside" id="vJY-dj-Wt6"/>
+                                    <action selector="startAnimation:" destination="he6-da-gHb" eventType="touchUpInside" id="1ky-1h-iVf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,13 +109,12 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K5u-8Q-MsY"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="animatedFarmer" destination="SgW-Bw-3RH" id="6d7-yj-xBh"/>
-                        <outlet property="animationButton" destination="n8U-5g-vts" id="IuO-b5-sps"/>
+                        <outlet property="farmer" destination="la4-0d-3tq" id="Sme-vm-xQb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pd-q3-8f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922" y="890"/>
+            <point key="canvasLocation" x="-922.26562499999989" y="889.84375"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="pue-co-KE2">
@@ -221,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blankoBackground2-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-1c-9ob">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="Fh2-Zn-jNh">
@@ -251,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGQ-Ua-xIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6092" y="889"/>
+            <point key="canvasLocation" x="6091.9921875" y="888.28125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5K-Jp-Ed4">
@@ -335,20 +330,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUE-pF-taD">
-                                <rect key="frame" x="250" y="254" width="112" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="moon"/>
-                                <connections>
-                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="yJm-Zd-Qlm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-I5-Aiy">
                                 <rect key="frame" x="635" y="229" width="168" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="star"/>
                                 <connections>
                                     <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="g5P-kb-6C0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUE-pF-taD">
+                                <rect key="frame" x="228" y="219" width="156" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="moonWithFrame"/>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="yJm-Zd-Qlm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -372,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FF-U4-udJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3448" y="-483"/>
+            <point key="canvasLocation" x="3447.65625" y="-483.59375"/>
         </scene>
         <!--SecondPage-->
         <scene sceneID="r4N-GE-eoC">
@@ -387,19 +382,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="btL-Tb-P3r">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="iRN-Q7-SUJ">
-                                <rect key="frame" x="603" y="458" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy7-wp-tle">
+                                <rect key="frame" x="612" y="319" width="230" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfo-gm-0j2">
-                                <rect key="frame" x="451" y="701" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Speaking"/>
+                                <state key="normal" title="Button" image="farmer"/>
                                 <connections>
-                                    <action selector="sVCstartAmination:" destination="tVn-Ga-LPJ" eventType="touchUpInside" id="hdb-xI-34U"/>
+                                    <action selector="sVCstartAmination:" destination="tVn-Ga-LPJ" eventType="touchUpInside" id="cGE-FG-jGc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -409,13 +400,12 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cGB-kN-Xd9"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="sVCanimatedFarmer" destination="iRN-Q7-SUJ" id="kJs-91-cw4"/>
-                        <outlet property="sVCanimationButton" destination="pfo-gm-0j2" id="auI-3b-0Pm"/>
+                        <outlet property="sVCFarmer" destination="gy7-wp-tle" id="k94-8a-kMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fev-2v-25q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="889"/>
+            <point key="canvasLocation" x="395.5078125" y="888.28125"/>
         </scene>
         <!--Summary Game View Controller-->
         <scene sceneID="xk4-Rh-l93">
@@ -473,23 +463,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-gz-x0S">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fee" translatesAutoresizingMaskIntoConstraints="NO" id="WjS-9F-ncy">
-                                <rect key="frame" x="705" y="496" width="245" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animalFeedStar" translatesAutoresizingMaskIntoConstraints="NO" id="MIo-Wm-cHw">
                                 <rect key="frame" x="576" y="542" width="190" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDB-W4-hct">
-                                <rect key="frame" x="446" y="701" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYs-oB-3NX">
+                                <rect key="frame" x="719" y="406" width="285" height="306"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Animation"/>
+                                <state key="normal" title="Button" image="fee"/>
                                 <connections>
-                                    <action selector="thirdVCstartAmination:" destination="hE0-gY-UkO" eventType="touchUpInside" id="IvE-hp-2Ub"/>
+                                    <action selector="thirdVCstartAmination:" destination="hE0-gY-UkO" eventType="touchUpInside" id="OHf-PC-InT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -499,14 +485,13 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qRv-gu-ONX"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="thirdVCanimatedFeestar" destination="WjS-9F-ncy" id="7tX-by-JxG"/>
+                        <outlet property="thirdVCStarFee" destination="qYs-oB-3NX" id="Po5-qU-r0G"/>
                         <outlet property="thirdVCanimatedFood" destination="MIo-Wm-cHw" id="wdT-th-lEn"/>
-                        <outlet property="thirdVCanimationButton" destination="mDB-W4-hct" id="t0S-jR-fKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOU-X5-ZX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798" y="890"/>
+            <point key="canvasLocation" x="1797.6562499999998" y="889.84375"/>
         </scene>
         <!--FifthPage-->
         <scene sceneID="y3U-gf-TrK">
@@ -521,7 +506,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="withAnimalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="lXw-Am-bBe">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -530,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJj-mR-szD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4582" y="890"/>
+            <point key="canvasLocation" x="4581.4453125" y="889.84375"/>
         </scene>
         <!--FourthPage-->
         <scene sceneID="rEb-ry-4h3">
@@ -545,23 +530,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-gC-dGy">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feeWithOpenhair" translatesAutoresizingMaskIntoConstraints="NO" id="vFL-ZA-KeW">
-                                <rect key="frame" x="555" y="535" width="234" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animalFeedMoon" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-ac-idC">
                                 <rect key="frame" x="771" y="506" width="177" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-5P-fgY">
-                                <rect key="frame" x="446" y="702" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6s-RI-wHs">
+                                <rect key="frame" x="553" y="426" width="263" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Animation"/>
+                                <state key="normal" title="Button" image="feeWithOpenhair"/>
                                 <connections>
-                                    <action selector="fourthVCanimationStart:" destination="ii2-Wg-FOw" eventType="touchUpInside" id="1Av-Ma-hfc"/>
+                                    <action selector="fourthVCanimationStart:" destination="ii2-Wg-FOw" eventType="touchUpInside" id="8Dk-77-wMY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -571,15 +552,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I31-a9-Gdj"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="fourthVCanimatedFeemoon" destination="vFL-ZA-KeW" id="jQW-eh-Pct"/>
                         <outlet property="fourthVCanimatedFood" destination="Axn-ac-idC" id="d0t-Kz-L88"/>
-                        <outlet property="fourthVCanimatedStart" destination="XkM-5P-fgY" id="vyN-we-3aW"/>
+                        <outlet property="fourthVCanimatedMoonFee" destination="f6s-RI-wHs" id="hS2-id-r4a"/>
                         <outlet property="thirdVCanimatedFeestar" destination="Axn-ac-idC" id="nBe-qR-Xrr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXf-qA-JEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3141" y="890"/>
+            <point key="canvasLocation" x="3140.625" y="889.84375"/>
         </scene>
     </scenes>
     <resources>
@@ -592,7 +572,7 @@
         <image name="feeWithOpenhair" width="804" height="934"/>
         <image name="grass-2" width="1280" height="800"/>
         <image name="landscape" width="1267" height="712"/>
-        <image name="moon" width="112" height="140"/>
+        <image name="moonWithFrame" width="144" height="173"/>
         <image name="nature" width="1280" height="642"/>
         <image name="play" width="84" height="84"/>
         <image name="star" width="168" height="191"/>
@@ -602,7 +582,8 @@
         <image name="wood-dark" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C6l-Rt-ASW"/>
+        <segue reference="PPA-He-7hD"/>
+        <segue reference="V91-07-TyJ"/>
         <segue reference="mlx-OT-Z4v"/>
         <segue reference="R6O-96-ber"/>
     </inferredMetricsTieBreakers>

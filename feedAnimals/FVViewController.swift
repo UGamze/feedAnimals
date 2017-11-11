@@ -8,57 +8,57 @@
 
 import UIKit
 
-class FVViewController: UIViewController {
-
+class FVViewController: UIViewController  {
+    // for animation
+    var animationObj = Animation()
+    
+    
     //Objects for firstVC
-    @IBOutlet weak var animationButton: UIButton!
-    @IBOutlet weak var animatedFarmer: UIImageView!
+    @IBOutlet weak var farmer: UIButton!
 
     // Function for firstVC
     @IBAction func startAnimation(_ sender: UIButton) {
-        animateView(objectFarmer: animatedFarmer)
+        animationObj.animateButton(objectButton: farmer)
         createSpeechBubbleText(textForSpeech: "Hallo, ich bin der Bauer Heinz...", nameOfImage: "speechBubble")
     }
     //Objects for secondVC
-    @IBOutlet weak var sVCanimatedFarmer: UIImageView!
-    @IBOutlet weak var sVCanimationButton: UIButton!
+    @IBOutlet weak var sVCFarmer: UIButton!
     
     //Function for secondVC
     @IBAction func sVCstartAmination(_ sender: UIButton) {
-        animateView(objectFarmer: sVCanimatedFarmer)
+        animationObj.animateButton(objectButton: sVCFarmer)
         createSpeechBubbleText(textForSpeech:"... und ich hab ein Bauernhof mit vielen Tieren: Kühen, Enten, Hasen usw.", nameOfImage: "speechBubble")
-        animateView(objectFarmer: insertNewObject(name: "Sheep_body_happy_color", rec: CGRect(x: 750, y: 525, width: 160, height: 170)))
+        animationObj.animateView(objectView: insertNewObject(name: "Sheep_body_happy_color", rec: CGRect(x: 750, y: 525, width: 160, height: 170)))
         
-        animateView(objectFarmer: insertNewObject(name: "Cow_body_happy_color", rec: CGRect(x: 850, y: 480, width: 200, height: 250)))
+        animationObj.animateView(objectView: insertNewObject(name: "Cow_body_happy_color", rec: CGRect(x: 850, y: 480, width: 200, height: 250)))
         
-        animateView(objectFarmer: insertNewObject(name: "Cat_body_happy_color", rec: CGRect(x: 495, y: 515, width: 120, height: 200)))
+        animationObj.animateView(objectView: insertNewObject(name: "Cat_body_happy_color", rec: CGRect(x: 495, y: 515, width: 120, height: 200)))
         
-        animateView(objectFarmer: insertNewObject(name: "Chicken_body_happy_color", rec: CGRect(x: 660, y: 570, width: 140, height: 200)))
+        animationObj.animateView(objectView: insertNewObject(name: "Chicken_body_happy_color", rec: CGRect(x: 660, y: 570, width: 140, height: 200)))
         
-        animateView(objectFarmer: insertNewObject(name: "Rabbit_body_happy_color", rec: CGRect(x: 570, y: 570, width: 120, height: 200)))
+        animationObj.animateView(objectView: insertNewObject(name: "Rabbit_body_happy_color", rec: CGRect(x: 570, y: 570, width: 120, height: 200)))
     }
     
     //Objects for thirdVC
-    @IBOutlet weak var thirdVCanimationButton: UIButton!
+    @IBOutlet weak var thirdVCStarFee: UIButton!
     @IBOutlet weak var thirdVCanimatedFood: UIImageView!
     @IBOutlet weak var thirdVCanimatedFeestar: UIImageView!
     
     //Function for thirdVC
     @IBAction func thirdVCstartAmination(_ sender: UIButton) {
-        animateView(objectFarmer: thirdVCanimatedFood)
-        animateView(objectFarmer: thirdVCanimatedFeestar)
+        animationObj.animateView(objectView: thirdVCanimatedFood)
+        animationObj.animateButton(objectButton: thirdVCStarFee)
         createSpeechBubbleText(textForSpeech:"... eines Tages kommt die Sternenfee zu Bauer Heinz. Sie hat ein Zauberfutter dabei. Sie sagt, dass ihr Zauberfutter Tiere glücklich macht.", nameOfImage: "speechBubble-eckig")
     }
     
     //Objects for fourthVC
-    @IBOutlet weak var fourthVCanimatedFeemoon: UIImageView!
-    @IBOutlet weak var fourthVCanimatedStart: UIButton!
     @IBOutlet weak var fourthVCanimatedFood: UIImageView!
+    @IBOutlet weak var fourthVCanimatedMoonFee: UIButton!
     
     //Function for fourthVC
     @IBAction func fourthVCanimationStart(_ sender: UIButton) {
-        animateView(objectFarmer: fourthVCanimatedFood)
-        animateView(objectFarmer: fourthVCanimatedFeemoon)
+        animationObj.animateView(objectView: fourthVCanimatedFood)
+        animationObj.animateButton(objectButton: fourthVCanimatedMoonFee)
         createSpeechBubbleText(textForSpeech:"... am gleichen Tag kommt auch die Mondfee. Auch sie hat ein Zauberfutter dabei und sagt, dass ihr Zauberfutter Tiere glücklich macht.", nameOfImage: "speechBubble-eckig")
     }
     
@@ -81,19 +81,7 @@ class FVViewController: UIViewController {
         //during the animation-> the button is inactive
     }**/
     
-        
-    func animateView(objectFarmer:UIImageView){
-        UIView.animate(withDuration: 1,delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                objectFarmer.frame.size.width += 30
-                objectFarmer.frame.size.height += 30
-            }) { _ in
-            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
-                objectFarmer.frame.size.width -= 30
-                objectFarmer.frame.size.height -= 30
-            })
-        }
-    }
-        
+    // erstellt eine Sprechblase
     func createSpeechBubbleText(textForSpeech:NSString, nameOfImage: String) {
         //create speechBubble with text and switch position
         let imageView = UIImageView(image: UIImage(named: nameOfImage)!)

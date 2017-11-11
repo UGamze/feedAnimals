@@ -39,9 +39,5 @@ class Level: NSObject {
         self.numberUnluckyStar = numberUnluckyStar
         self.sadAnimalImg = sadAnimalImg
         self.withMouthAnimalImg = withMouthAnimalImg
-        
     }
-    
-    
-    
 }
