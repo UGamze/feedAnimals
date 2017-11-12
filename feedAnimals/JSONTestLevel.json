@@ -12,8 +12,8 @@
       "numberAnimalStar":6,
       "numberLuckyMoon":2,
       "numberUnluckyMoon":4,
-      "numberLuckyStar":0,
-      "numberUnluckyStar":6
+      "numberLuckyStar":1,
+      "numberUnluckyStar":5
    },
    {
       "id":2,
@@ -56,11 +56,11 @@
       "withMouthAnimalImg":"chickenWithMouth",
       "foodMoonImg":"barn-moon",
       "foodStarImg":"barn-star",
-      "numberAnimalMoon":6,
-      "numberAnimalStar":6,
-      "numberLuckyMoon":3,
-      "numberUnluckyMoon":3,
-      "numberLuckyStar":5,
+      "numberAnimalMoon":8,
+      "numberAnimalStar":8,
+      "numberLuckyMoon":4,
+      "numberUnluckyMoon":4,
+      "numberLuckyStar":7,
       "numberUnluckyStar":1
    }
 ]

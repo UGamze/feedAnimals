@@ -330,20 +330,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-I5-Aiy">
-                                <rect key="frame" x="635" y="229" width="168" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="star"/>
-                                <connections>
-                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="g5P-kb-6C0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUE-pF-taD">
                                 <rect key="frame" x="228" y="219" width="156" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="moonWithFrame"/>
                                 <connections>
                                     <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="yJm-Zd-Qlm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvI-I5-Aiy">
+                                <rect key="frame" x="638" y="230" width="165" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="star"/>
+                                <connections>
+                                    <action selector="pressOverlay:" destination="qmw-d6-jWO" eventType="touchUpInside" id="g5P-kb-6C0"/>
                                 </connections>
                             </button>
                         </subviews>

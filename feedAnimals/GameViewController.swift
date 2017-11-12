@@ -284,10 +284,18 @@ class GameViewController: UIViewController{
             for n in 0..<thisLevel.numberLuckyStar{
                 UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                     distance = n * ((462 - 104)/self.thisLevel.numberLuckyStar)
-                    self.animalStarArr[n].frame = CGRect(x: 520 + distance, y: 100, width: 100, height: 80)
+                    self.animalStarArr[n].frame = CGRect(x: 520 + distance, y: 130, width: 100, height: 80)
                     self.animalStarArr[n].image = UIImage(named: self.thisLevel.happyAnimalImg)
                 }, completion: { finished in
                     self.animalStarArr[n].isHidden = false
+                })
+            }
+            for i in thisLevel.numberLuckyStar..<thisLevel.numberAnimalStar{
+                UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
+                    distance = (i-self.thisLevel.numberLuckyStar) * ((462 - 104)/self.thisLevel.numberUnluckyStar)
+                    self.animalStarArr[i].frame = CGRect(x: 520 + distance, y: 430, width: 100, height: 80)
+                }, completion: { finished in
+                    self.animalStarArr[i].isHidden = false
                 })
             }
             sender.isHidden = true
@@ -299,15 +307,28 @@ class GameViewController: UIViewController{
             }
             break
         case 2:    //when button.tag = 2 Moon is clicked...
+            //die ersten bis numberLucky sind lucky
             for n in 0..<thisLevel.numberLuckyMoon{
                 UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                     distance = n * ((462 - 104)/self.thisLevel.numberLuckyMoon)
-                    self.animalMoonArr[n].frame = CGRect(x: 110 + distance, y: 100, width: 100, height: 80)
+                    self.animalMoonArr[n].frame = CGRect(x: 110 + distance, y: 130, width: 100, height: 80)
                     self.animalMoonArr[n].image = UIImage(named: self.thisLevel.happyAnimalImg)
                 }, completion: { finished in
                     self.animalMoonArr[n].isHidden = false
                 })
             }
+        
+            //ab Lucky bis numberAnimal sind unlucky
+            for i in thisLevel.numberLuckyMoon..<thisLevel.numberAnimalMoon{
+                UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
+                    // (i-self.thisLevel.numberLuckyMoon) -> damit es auch mit 0 anfängt
+                    distance = (i-self.thisLevel.numberLuckyMoon) * ((462 - 104)/self.thisLevel.numberUnluckyMoon)
+                    self.animalMoonArr[i].frame = CGRect(x: 110 + distance, y: 430, width: 100, height: 80)
+                }, completion: { finished in
+                    self.animalMoonArr[i].isHidden = false
+                })
+            }
+            
             sender.isHidden = true
             if(overlayButtonRStar.isEnabled == true){
                 _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
@@ -348,14 +369,14 @@ class GameViewController: UIViewController{
             })
         }
     }
-    
+  /*
     func seperateLuckyUnluckyAnimals(animals: [UIImageView], numberLucky: Int, numberUnlucky: Int) {
         if animals.count <= numberLucky {
             // move animals along the y position
         }else{
             // move rest animals along the y position
         }
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
