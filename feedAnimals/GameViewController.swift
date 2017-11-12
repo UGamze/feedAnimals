@@ -42,8 +42,9 @@ class GameViewController: UIViewController{
     var starImageView = UIImageView()
     
     // this boolean is to prevent a multiple call of the func touchEnded
-    var isStarTouchEnded = false
-    var isMoonTouchEnded = false
+    var isTouchAllowed = true
+    var isStarTouchAllowed = true
+    var isMoonTouchAllowed = true
     
     var animalMoonArr = [UIImageView]()
     var animalStarArr = [UIImageView]()
@@ -166,13 +167,9 @@ class GameViewController: UIViewController{
             let location = touch.location(in: self.view)
             
             if starImageView.frame.contains(location){
-                if isStarTouchEnded == false {
                     self.starImageView.center = location
-                }
             }else{
-                if isMoonTouchEnded == false {
                     self.moonImageView.center = location
-                }
             }
         }
     }
@@ -183,71 +180,78 @@ class GameViewController: UIViewController{
             let location = touch.location(in: self.view)
             
             if starImageView.frame.contains(location){
-                if isStarTouchEnded == false {
                     self.starImageView.center = location
-                }
             }else if moonImageView.frame.contains(location){
-                if isMoonTouchEnded == false {
                     self.moonImageView.center = location
-                }
             }
         }
     }
     
     //3
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in (touches){
-            let location = touch.location(in: self.view)
-            var counter : CGFloat = -160
-            if (starImageView.frame.contains(location)) && (isStarTouchEnded == false){
-                starImageView.isHidden = true
-                for _ in 0...4 {
-                    self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
-                    starImageView.frame.size.width = 80
-                    starImageView.frame.size.height = 40
-                    starImageView.center.x = (dropImageStar.center.x + counter)
-                    starImageView.center.y = dropImageStar.center.y
-                    view.addSubview(starImageView)
-                    foodStarArr.append(starImageView)
-                    starImageView.superview?.bringSubview(toFront: cloud)
-                    isStarTouchEnded = true
-                    //overlayButtonRStar.isEnabled = true
-                    counter += 80
-                    
+        if isTouchAllowed == true{
+            for touch in (touches){
+                let location = touch.location(in: self.view)
+                var counter : CGFloat = -160
+                if (starImageView.frame.contains(location)) && (isStarTouchAllowed == true){
+                    starImageView.isHidden = true
+                    for _ in 0...4 {
+                        self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
+                        starImageView.frame.size.width = 80
+                        starImageView.frame.size.height = 40
+                        starImageView.center.x = (dropImageStar.center.x + counter)
+                        starImageView.center.y = dropImageStar.center.y
+                        view.addSubview(starImageView)
+                        foodStarArr.append(starImageView)
+                        starImageView.superview?.bringSubview(toFront: cloud)
+                        isStarTouchAllowed = false
+                        //overlayButtonRStar.isEnabled = true
+                        counter += 80
+                        
+                    }
+                    feedAnimals(animals: animalStarArr, food: foodStarArr)
+                    if(isMoonTouchAllowed == false){
+                        self.isTouchAllowed = false
+                    }
+                    _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                        // do stuff 6 seconds later
+                        // Button "Wie viele <Tier> werden glücklich?"
+                        self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString), foodImg: self.starImageView)
+                    }
                 }
-                feedAnimals(animals: animalStarArr, food: foodStarArr)
-                
-            }
-            if (moonImageView.frame.contains(location)) && (isMoonTouchEnded == false){
-                moonImageView.isHidden = true
-                for _ in 0...4 {
-                    self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
-                    moonImageView.frame.size.width = 80
-                    moonImageView.frame.size.height = 40
-                    moonImageView.center.x = (dropImageMoon.center.x + counter)
-                    moonImageView.center.y = dropImageMoon.center.y
-                    view.addSubview(moonImageView)
-                    foodMoonArr.append(moonImageView)
-                    moonImageView.superview?.bringSubview(toFront: cloud)
-                    isMoonTouchEnded = true
-                    //overlayButtonLMoon.isEnabled = true
-                    counter += 80
-                    
+                else if (moonImageView.frame.contains(location)) && (isMoonTouchAllowed == true){
+                    moonImageView.isHidden = true
+                    for _ in 0...4 {
+                        self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
+                        moonImageView.frame.size.width = 80
+                        moonImageView.frame.size.height = 40
+                        moonImageView.center.x = (dropImageMoon.center.x + counter)
+                        moonImageView.center.y = dropImageMoon.center.y
+                        view.addSubview(moonImageView)
+                        foodMoonArr.append(moonImageView)
+                        moonImageView.superview?.bringSubview(toFront: cloud)
+                        isMoonTouchAllowed = false
+                        //overlayButtonLMoon.isEnabled = true
+                        counter += 80
+                        
+                    }
+                    feedAnimals(animals: animalMoonArr, food: foodMoonArr)
+                    if(isStarTouchAllowed == false){
+                        self.isTouchAllowed = false
+                    }
+                    _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                        // do stuff 6 seconds later
+                        // Button "Wie viele <Tier> werden glücklich?"
+                        self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString), foodImg: self.moonImageView)
+                    }
                 }
-                feedAnimals(animals: animalMoonArr, food: foodMoonArr)
             }
         }
-        _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
-            // do stuff 6 seconds later
-            // Button "Wie viele <Tier> werden glücklich?"
-            self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString))
-        }
-
     }
  
-    func addCheckHappyAnimalButton(nameOfImage:NSString) {
+    func addCheckHappyAnimalButton(nameOfImage:NSString, foodImg:UIImageView) {
         //210 350
-        if (isStarTouchEnded == true) {
+        if foodImg == starImageView {
             let button = UIButton(frame: CGRect(x:540, y: 310, width: 350, height: 80))
             button.tag = 1
             button.layer.cornerRadius = 40
@@ -259,7 +263,7 @@ class GameViewController: UIViewController{
             button.addTarget(self, action: #selector(checkIfAnimalsHappyButton), for: .touchUpInside)
             
             self.view.addSubview(button)
-        }else if (isMoonTouchEnded == true){
+        }else if foodImg == moonImageView{
             let button = UIButton(frame: CGRect(x:130, y: 310, width: 350, height: 80))
             button.tag = 2
             button.layer.cornerRadius = 40
@@ -272,7 +276,6 @@ class GameViewController: UIViewController{
 
             self.view.addSubview(button)
         }
-        
     }
     // if click the button to sort the animals
     func checkIfAnimalsHappyButton(sender: UIButton!) {
