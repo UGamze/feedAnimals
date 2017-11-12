@@ -237,9 +237,12 @@ class GameViewController: UIViewController{
                 feedAnimals(animals: animalMoonArr, food: foodMoonArr)
             }
         }
-        
-        // Button "Wie viele <Tier> werden glücklich?"
-        addCheckHappyAnimalButton(nameOfImage: (thisLevel.animalName as NSString))
+        _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+            // do stuff 6 seconds later
+            // Button "Wie viele <Tier> werden glücklich?"
+            self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString))
+        }
+
     }
  
     func addCheckHappyAnimalButton(nameOfImage:NSString) {
@@ -289,7 +292,10 @@ class GameViewController: UIViewController{
             }
             sender.isHidden = true
             if(overlayButtonLMoon.isEnabled == true){
-                animationObj.pulsate(objectButton: overlayButtonLMoon)
+                _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                    // do stuff 5 seconds later
+                    self.animationObj.pulsate(objectButton: self.overlayButtonLMoon)
+                }
             }
             break
         case 2:    //when button.tag = 2 Moon is clicked...
@@ -304,7 +310,10 @@ class GameViewController: UIViewController{
             }
             sender.isHidden = true
             if(overlayButtonRStar.isEnabled == true){
-                animationObj.pulsate(objectButton: overlayButtonRStar)
+                _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
+                    // do stuff 5 seconds later
+                    self.animationObj.pulsate(objectButton: self.overlayButtonRStar)
+                }
             }
             break
         default:
@@ -318,6 +327,7 @@ class GameViewController: UIViewController{
         var images = [UIImage]()
         let lastImage = UIImage(named: thisLevel.happyAnimalImg)
         
+        // animalImg is array with String, images includes the UIImages
         for i in 0..<animalImg.count{
             images.append(UIImage(named: animalImg[i])!)
         }
@@ -337,7 +347,6 @@ class GameViewController: UIViewController{
                 n.isHidden = true
             })
         }
-        
     }
     
     func seperateLuckyUnluckyAnimals(animals: [UIImageView], numberLucky: Int, numberUnlucky: Int) {
