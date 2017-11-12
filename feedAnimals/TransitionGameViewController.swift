@@ -77,9 +77,10 @@ class TransitionGameViewController: UIViewController {
                     guard let numberUnluckyMoon = levelDict["numberUnluckyMoon"] as? Int else {return}
                     guard let numberUnluckyStar = levelDict["numberUnluckyStar"] as? Int else {return}
                     guard let sadAnimalImg = levelDict["sadAnimalImg"] as? String else {return}
+                    guard let neutralAnimalImg = levelDict["neutralAnimalImg"] as? String else {return}
                     guard let withMouthAnimalImg = levelDict["withMouthAnimalImg"] as? String else {return}
                     
-                    self.allLevel.append(Level(animalName: animalName, animalWithBody: animalWithBody, foodMoonImg: foodMoonImg, foodStarImg: foodStarImg, happyAnimalImg: happyAnimalImg, numberAnimalMoon: numberAnimalMoon, numberAnimalStar: numberAnimalStar, numberLuckyMoon: numberLuckyMoon, numberLuckyStar: numberLuckyStar, numberUnluckyMoon: numberUnluckyMoon, numberUnluckyStar: numberUnluckyStar, sadAnimalImg: sadAnimalImg, withMouthAnimalImg: withMouthAnimalImg))
+                    self.allLevel.append(Level(animalName: animalName, animalWithBody: animalWithBody, foodMoonImg: foodMoonImg, foodStarImg: foodStarImg, happyAnimalImg: happyAnimalImg, numberAnimalMoon: numberAnimalMoon, numberAnimalStar: numberAnimalStar, numberLuckyMoon: numberLuckyMoon, numberLuckyStar: numberLuckyStar, numberUnluckyMoon: numberUnluckyMoon, numberUnluckyStar: numberUnluckyStar, sadAnimalImg: sadAnimalImg, neutralAnimalImg: neutralAnimalImg, withMouthAnimalImg: withMouthAnimalImg))
                     
                 }
                 if(self.myInt < self.allLevel.count) {

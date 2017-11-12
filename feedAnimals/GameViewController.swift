@@ -99,7 +99,7 @@ class GameViewController: UIViewController{
         var myDelay = 0.0
         if sender == overlayButtonRStar {
             //464
-            animalStarArr = gameSettingsAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.sadAnimalImg as String)
+            animalStarArr = gameSettingsAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.neutralAnimalImg as String)
         
             for imageView in (animalStarArr){
                 // the change of the delay can help us to let the animals come partially in
@@ -122,7 +122,7 @@ class GameViewController: UIViewController{
         }
         if sender == overlayButtonLMoon {
             //45
-            animalMoonArr = gameSettingsAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.sadAnimalImg as String)
+            animalMoonArr = gameSettingsAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.neutralAnimalImg as String)
             
             for imageView in (animalMoonArr){
                 // the change of the delay can help us to let the animals come partially in
@@ -297,6 +297,7 @@ class GameViewController: UIViewController{
                 UIView.animate(withDuration: 5, delay: 0.5, options: UIViewAnimationOptions.transitionCurlUp, animations: {
                     distance = (i-self.thisLevel.numberLuckyStar) * ((462 - 104)/self.thisLevel.numberUnluckyStar)
                     self.animalStarArr[i].frame = CGRect(x: 520 + distance, y: 430, width: 100, height: 80)
+                    self.animalStarArr[i].image = UIImage(named: self.thisLevel.sadAnimalImg)
                 }, completion: { finished in
                     self.animalStarArr[i].isHidden = false
                 })
@@ -327,6 +328,7 @@ class GameViewController: UIViewController{
                     // (i-self.thisLevel.numberLuckyMoon) -> damit es auch mit 0 anfängt
                     distance = (i-self.thisLevel.numberLuckyMoon) * ((462 - 104)/self.thisLevel.numberUnluckyMoon)
                     self.animalMoonArr[i].frame = CGRect(x: 110 + distance, y: 430, width: 100, height: 80)
+                    self.animalMoonArr[i].image = UIImage(named: self.thisLevel.sadAnimalImg)
                 }, completion: { finished in
                     self.animalMoonArr[i].isHidden = false
                 })
@@ -349,7 +351,6 @@ class GameViewController: UIViewController{
     func feedAnimals(animals: [UIImageView], food: [UIImageView]) {
         let animalImg = [thisLevel.happyAnimalImg,thisLevel.withMouthAnimalImg,thisLevel.happyAnimalImg]
         var images = [UIImage]()
-        let lastImage = UIImage(named: thisLevel.happyAnimalImg)
         
         // animalImg is array with String, images includes the UIImages
         for i in 0..<animalImg.count{

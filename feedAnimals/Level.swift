@@ -21,10 +21,11 @@ class Level: NSObject {
     var numberUnluckyMoon = Int()
     var numberUnluckyStar = Int()
     var sadAnimalImg = String()
+    var neutralAnimalImg = String()
     var withMouthAnimalImg = String()
     
     
-    init(animalName: String, animalWithBody: String, foodMoonImg: String, foodStarImg: String, happyAnimalImg: String, numberAnimalMoon: Int, numberAnimalStar: Int, numberLuckyMoon: Int, numberLuckyStar: Int, numberUnluckyMoon: Int, numberUnluckyStar: Int, sadAnimalImg: String, withMouthAnimalImg: String) {
+    init(animalName: String, animalWithBody: String, foodMoonImg: String, foodStarImg: String, happyAnimalImg: String, numberAnimalMoon: Int, numberAnimalStar: Int, numberLuckyMoon: Int, numberLuckyStar: Int, numberUnluckyMoon: Int, numberUnluckyStar: Int, sadAnimalImg: String, neutralAnimalImg: String, withMouthAnimalImg: String) {
         
         self.animalName = animalName
         self.animalWithBody = animalWithBody
@@ -38,6 +39,7 @@ class Level: NSObject {
         self.numberUnluckyMoon = numberUnluckyMoon
         self.numberUnluckyStar = numberUnluckyStar
         self.sadAnimalImg = sadAnimalImg
+        self.neutralAnimalImg = neutralAnimalImg
         self.withMouthAnimalImg = withMouthAnimalImg
     }
 }
