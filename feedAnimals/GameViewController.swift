@@ -95,9 +95,19 @@ class GameViewController: UIViewController{
     }
     
     @IBAction func pressOverlay(_ sender: UIButton) {
+        var myDelay = 0.0
         if sender == overlayButtonRStar {
             //464
             animalStarArr = gameSettingsAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.sadAnimalImg as String)
+        
+            for imageView in (animalStarArr){
+                // the change of the delay can help us to let the animals come partially in
+                UIView.animate(withDuration: 1.5, delay: myDelay, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    imageView.center.y += self.view.bounds.width
+                    myDelay = myDelay + 0.5
+                }, completion: nil)
+            }
+            
             overlayRight.isHidden = true
             
             /*mit alpha wird es transparent-> isEnabled setzt es ebenfalls auf transparent
@@ -105,17 +115,26 @@ class GameViewController: UIViewController{
             
             overlayButtonRStar.isEnabled = false
             self.starImageView = UIImageView(image: UIImage(named: thisLevel.foodStarImg))
-            starImageView.frame = CGRect(x: 435, y: 640, width: 200, height: 120)
+            starImageView.frame = CGRect(x: 430, y: 620, width: 200, height: 120)
             view.addSubview(starImageView)
                
         }
         if sender == overlayButtonLMoon {
             //45
             animalMoonArr = gameSettingsAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.sadAnimalImg as String)
+            
+            for imageView in (animalMoonArr){
+                // the change of the delay can help us to let the animals come partially in
+                UIView.animate(withDuration: 1.5, delay: myDelay, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    imageView.center.y += self.view.bounds.width
+                    myDelay = myDelay + 0.5
+                }, completion: nil)
+            }
+            
             overlayLeft.isHidden = true
             overlayButtonLMoon.isEnabled = false
             self.moonImageView = UIImageView(image: UIImage(named: thisLevel.foodMoonImg))
-            moonImageView.frame = CGRect(x: 435, y: 640, width: 200, height: 120)
+            moonImageView.frame = CGRect(x: 430, y: 620, width: 200, height: 120)
             view.addSubview(moonImageView)
         }
     }
@@ -133,12 +152,10 @@ class GameViewController: UIViewController{
             imageView.frame = CGRect(x: xDepOnCount, y: 460, width: 100, height: 80)
             imageView.center.y -= view.bounds.width
             
-            UIView.animate(withDuration: 1.5, animations: {
-                imageView.center.y += self.view.bounds.width
-            })
             self.view.addSubview(imageView)
             xCalStart = xDepOnCount
             imageViewArr.append(imageView)
+            
         }
         return imageViewArr
     }
