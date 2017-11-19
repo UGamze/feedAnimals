@@ -15,25 +15,24 @@ class GameViewController: UIViewController{
     
     // left top
     @IBOutlet weak var firstFarmArea: UIImageView!
-    
     // left buttom
     @IBOutlet weak var secondFarmArea: UIImageView!
-    
     // right top
     @IBOutlet weak var thirdFarmArea: UIImageView!
-    
     // right buttom
     @IBOutlet weak var fourthFarmArea: UIImageView!
 
     @IBOutlet weak var dropImageMoon: UIImageView!
-    
     @IBOutlet weak var dropImageStar: UIImageView!
     
+    // for position the food
     @IBOutlet weak var cloud: UIImageView!
     
+    // button to enable a click on this area
     @IBOutlet weak var overlayLeft: UIButton!
     @IBOutlet weak var overlayRight: UIButton!
     
+    // the star and the moon Button for bringing the animals into the field
     @IBOutlet weak var overlayButtonRStar: UIButton!
     @IBOutlet weak var overlayButtonLMoon: UIButton!
     
@@ -46,9 +45,11 @@ class GameViewController: UIViewController{
     var isStarTouchAllowed = true
     var isMoonTouchAllowed = true
     
+    // arrays for animals
     var animalMoonArr = [UIImageView]()
     var animalStarArr = [UIImageView]()
     
+    // arrays for food
     var foodMoonArr = [UIImageView]()
     var foodStarArr = [UIImageView]()
     
@@ -65,14 +66,15 @@ class GameViewController: UIViewController{
     var sadAnimalImg = String()
     var withMouthAnimalImg = String()
     
+    // information about Level
     var thisLevel: Level!
     var levelID = Int()
     var allLevelCount = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationObj.pulsate(objectButton:overlayButtonRStar)
-        animationObj.pulsate(objectButton:overlayButtonLMoon)
+        animationObj.pulsateButton(objectButton:overlayButtonRStar)
+        animationObj.pulsateButton(objectButton:overlayButtonLMoon)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -82,6 +84,7 @@ class GameViewController: UIViewController{
         thisLevelViewController.myInt = levelID
         thisLevelViewController.actualLevel = thisLevel
     }
+    
     
     @IBAction func changeLevel(_ sender: UIButton) {
         self.levelID = levelID + 1
@@ -99,7 +102,7 @@ class GameViewController: UIViewController{
         var myDelay = 0.0
         if sender == overlayButtonRStar {
             //464
-            animalStarArr = gameSettingsAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.neutralAnimalImg as String)
+            animalStarArr = gamePreconditionAnimal(xStart: 470, animalCount: thisLevel.numberAnimalStar, animalName:thisLevel.neutralAnimalImg as String)
         
             for imageView in (animalStarArr){
                 // the change of the delay can help us to let the animals come partially in
@@ -122,7 +125,7 @@ class GameViewController: UIViewController{
         }
         if sender == overlayButtonLMoon {
             //45
-            animalMoonArr = gameSettingsAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.neutralAnimalImg as String)
+            animalMoonArr = gamePreconditionAnimal(xStart: 55, animalCount: thisLevel.numberAnimalMoon, animalName: thisLevel.neutralAnimalImg as String)
             
             for imageView in (animalMoonArr){
                 // the change of the delay can help us to let the animals come partially in
@@ -141,7 +144,7 @@ class GameViewController: UIViewController{
     }
     
     // position the animals to feed position behind the wood
-    func gameSettingsAnimal(xStart:Int, animalCount:Int, animalName:String)-> [UIImageView] {
+    func gamePreconditionAnimal(xStart:Int, animalCount:Int, animalName:String)-> [UIImageView] {
         // calculate x depend on animalCount
         var xCalStart = xStart
         var imageView = UIImageView()
@@ -161,7 +164,7 @@ class GameViewController: UIViewController{
         return imageViewArr
     }
     
-    //1
+    //1 touch of food in the cloud (drag and drop)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in (touches){
             let location = touch.location(in: self.view)
@@ -174,7 +177,7 @@ class GameViewController: UIViewController{
         }
     }
     
-    //2
+    //2 touch of food in the cloud (drag and drop)
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let location = touch.location(in: self.view)
@@ -187,7 +190,7 @@ class GameViewController: UIViewController{
         }
     }
     
-    //3
+    //3 touch of food in the cloud (drag and drop)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isTouchAllowed == true{
             for touch in (touches){
@@ -214,7 +217,7 @@ class GameViewController: UIViewController{
                         self.isTouchAllowed = false
                     }
                     _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
-                        // do stuff 6 seconds later
+                        // do stuff 5 seconds later
                         // Button "Wie viele <Tier> werden glücklich?"
                         self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString), foodImg: self.starImageView)
                     }
@@ -240,7 +243,7 @@ class GameViewController: UIViewController{
                         self.isTouchAllowed = false
                     }
                     _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
-                        // do stuff 6 seconds later
+                        // do stuff 5 seconds later
                         // Button "Wie viele <Tier> werden glücklich?"
                         self.addCheckHappyAnimalButton(nameOfImage: (self.thisLevel.animalName as NSString), foodImg: self.moonImageView)
                     }
@@ -277,6 +280,7 @@ class GameViewController: UIViewController{
             self.view.addSubview(button)
         }
     }
+    
     // if click the button to sort the animals
     func checkIfAnimalsHappyButton(sender: UIButton!) {
         var distance = 0
@@ -306,7 +310,7 @@ class GameViewController: UIViewController{
             if(overlayButtonLMoon.isEnabled == true){
                 _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
                     // do stuff 5 seconds later
-                    self.animationObj.pulsate(objectButton: self.overlayButtonLMoon)
+                    self.animationObj.pulsateButton(objectButton: self.overlayButtonLMoon)
                 }
             }
             break
@@ -338,7 +342,7 @@ class GameViewController: UIViewController{
             if(overlayButtonRStar.isEnabled == true){
                 _ = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (timer) in
                     // do stuff 5 seconds later
-                    self.animationObj.pulsate(objectButton: self.overlayButtonRStar)
+                    self.animationObj.pulsateButton(objectButton: self.overlayButtonRStar)
                 }
             }
             break

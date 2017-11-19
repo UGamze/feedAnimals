@@ -11,6 +11,7 @@ import UIKit
 class PageContentViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     var tTime: Timer!
     
+    //arr for all slides
     lazy var VCArr: [UIViewController] = {
         return [self.VCInstance(name: "FirstPageViewController"),
                 self.VCInstance(name: "SecondPageViewController"),
@@ -20,6 +21,7 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
                 self.VCInstance(name: "TransitionPageViewController")]
     }()
     
+    // the ViewController Instance from Main Storyboard with identifier
     private func VCInstance(name: String) -> UIViewController{
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
@@ -34,10 +36,11 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.darkGray
         
-        
+        //set the first VC
         if let firstVC = VCArr.first{
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
+        
         //set timer for change Slide
         tTime = Timer.scheduledTimer(timeInterval: 8, target: self, selector: #selector(changeSlide), userInfo: nil, repeats: true)
     }
@@ -53,7 +56,7 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
             }
         }
     }
-    
+    //to change Controller
     func changeVC(VC: UIViewController) {
         setViewControllers([VC], direction: .forward, animated: true, completion: nil)
     }
@@ -112,7 +115,6 @@ class PageContentViewController: UIPageViewController, UIPageViewControllerDeleg
     
     var index = 0
     // change to the next Slide
-    // nur einmal pro View Controller aufruf
     func changeSlide() {
         if index < self.VCArr.count {
             print("Change Slide")

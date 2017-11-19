@@ -15,13 +15,13 @@ class TransitionGameViewController: UIViewController {
     @IBOutlet weak var farmer: UIButton!
     var myInt = Int()
     
-    // Save the Levels here
+    //save the Levels here
     var allLevel = [Level]()
     var actualLevel : Level!
 
+    //after click the farmer
     @IBAction func touchFarmer(_ sender: UIButton) {
         positionAnimal(nameOfImage: actualLevel.animalWithBody as NSString, countOfAnimal: actualLevel.numberAnimalMoon + actualLevel.numberAnimalStar, widthOfImage: 80.0, heightOfImage: 160.0)
-        //addFeedAnimalButton(nameOfImage: "cow")
 
         let button = UIButton(frame: CGRect(x:230, y: 350, width: 600, height: 80))
         button.layer.cornerRadius = 40
@@ -93,14 +93,13 @@ class TransitionGameViewController: UIViewController {
         }
         task.resume()
     }
-
+    //get the actuel Level
     func getActualLevel(id: Int) -> Level {
         let thisLevel = self.allLevel[id]
         return thisLevel
     }
-    
+    //position the animal randomly
     func positionAnimal(nameOfImage:NSString, countOfAnimal:Int, widthOfImage: CGFloat, heightOfImage: CGFloat) {
-        //TODO: min. distance neccessary
         let x = self.randomViewofAnimal.frame.origin.x
         let y = self.randomViewofAnimal.frame.origin.y
         for _ in 0 ..< countOfAnimal {
@@ -117,41 +116,13 @@ class TransitionGameViewController: UIViewController {
         }
         self.farmer.isUserInteractionEnabled = false
     }
-    
-    /**func addFeedAnimalButton(nameOfImage:NSString) {
-        //210 350
-        let button = UIButton(frame: CGRect(x:450, y: 310, width: 600, height: 80))
-        button.layer.cornerRadius = 40
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor(red: 0.7569, green: 0.3843, blue: 0.0667, alpha: 1.0).cgColor
-        button.backgroundColor = UIColor(red: 0.9451, green: 0.5137, blue: 0.1882, alpha: 1.0)
-        button.setTitle("Help me to feed the " + (nameOfImage as String) + "s" , for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        //button.center = self.view.center
-        self.view.addSubview(button)
-    }*/
+
     
     func buttonAction(sender: UIButton!) {
         if self.myInt < self.allLevel.count {
             performSegue(withIdentifier: "getSegue", sender: self)
         }
     }
-    
-    /*function for ramdom Position
-    func spawnRandomPosition() -> Int{
-        let position = Int()
-        let height = self.view!.frame.height
-        let width = self.view!.frame.width
-        
-        let randomPosition = CGPoint(x:CGFloat(arc4random()).truncatingRemainder(dividingBy: height),
-                                     y: CGFloat(arc4random()).truncatingRemainder(dividingBy: width))
-        
-        let sprite = SKSpriteNode()
-        sprite.position = randomPosition
-        
-        return position
-    }*/
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -18,7 +18,7 @@ class Animation {
     }
     */
 
-    // animiert ein Button
+    // animate a button
     func animateButton(objectButton:UIButton){
         UIView.animate(withDuration: 1,delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             objectButton.frame.size.width += 30
@@ -30,7 +30,7 @@ class Animation {
             })
         }
     }
-    // animiert eine View
+    // animate an UIImageView
     func animateView(objectView:UIImageView){
         UIView.animate(withDuration: 1,delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             objectView.frame.size.width += 30
@@ -43,8 +43,8 @@ class Animation {
         }
     }
     
-    func pulsate(objectButton:UIButton) {
-        
+    //pulsate a button
+    func pulsateButton(objectButton:UIButton) {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.6
         pulse.fromValue = 0.95

@@ -1,5 +1,5 @@
 //
-//  FVViewController.swift
+//  FHViewController.swift
 //  feedAnimals
 //
 //  Created by Gamze Ulucan on 13.08.17.
@@ -66,7 +66,7 @@ class FHViewController: UIViewController  {
         super.viewDidLoad()
     }
 
-    // erstellt eine Sprechblase
+    //Create a Speechbubble
     func createSpeechBubbleText(textForSpeech:NSString, nameOfImage: String) {
         //create speechBubble with text and switch position
         let imageView = UIImageView(image: UIImage(named: nameOfImage)!)
@@ -95,11 +95,11 @@ class FHViewController: UIViewController  {
         }
         return checkImageInView
     }
-    
+    //to insert a new Object with name and coordinates
     func insertNewObject(name:NSString, rec:CGRect) -> UIImageView{
         let imageView = UIImageView(image: UIImage(named: name as String)!)
         imageView.frame = rec
-        //doppeltes Anlegen von UIImageView vermeiden
+        //to eliminate double creation of UIImageView
         if(!checkImageViewInView(forImage: imageView)){
             view.addSubview(imageView)
             return imageView

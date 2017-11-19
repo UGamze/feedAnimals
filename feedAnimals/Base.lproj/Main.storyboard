@@ -34,21 +34,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-TJ-apd">
-                                <rect key="frame" x="392" y="371" width="241" height="30"/>
+                                <rect key="frame" x="370" y="360" width="285" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Asymmetric Task"/>
+                                <state key="normal" title="Asymmetrischer Task"/>
                                 <connections>
                                     <segue destination="M6P-gS-CEr" kind="show" id="mlx-OT-Z4v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-Df-RVU">
-                                <rect key="frame" x="388" y="478" width="248" height="30"/>
+                                <rect key="frame" x="378" y="466" width="269" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Symmetric Task"/>
+                                <state key="normal" title="Symmetrischer Task"/>
                                 <connections>
                                     <segue destination="M6P-gS-CEr" kind="show" id="jha-ID-UxK"/>
                                 </connections>
@@ -76,12 +76,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFt-24-3FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3216.2109375" y="-483.59375"/>
+            <point key="canvasLocation" x="-441" y="-484"/>
         </scene>
         <!--FirstPage-->
         <scene sceneID="AAB-1O-2uw">
             <objects>
-                <viewController restorationIdentifier="FirstPageViewController" storyboardIdentifier="FirstPageViewController" title="FirstPage" id="he6-da-gHb" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FirstPageViewController" storyboardIdentifier="FirstPageViewController" title="FirstPage" id="he6-da-gHb" customClass="FHViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J4M-Eu-oBX"/>
                         <viewControllerLayoutGuide type="bottom" id="wEJ-dV-m4P"/>
@@ -97,7 +97,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la4-0d-3tq">
                                 <rect key="frame" x="588" y="318" width="230" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="farmer"/>
+                                <state key="normal" title="Button" image="Farmer_body"/>
                                 <connections>
                                     <action selector="startAnimation:" destination="he6-da-gHb" eventType="touchUpInside" id="1ky-1h-iVf"/>
                                 </connections>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pd-q3-8f8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922.26562499999989" y="889.84375"/>
+            <point key="canvasLocation" x="-441" y="890"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="pue-co-KE2">
@@ -124,7 +124,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFJ-9u-eTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="-483"/>
+            <point key="canvasLocation" x="1903" y="-484"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="WTn-xT-h9W">
@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmer" translatesAutoresizingMaskIntoConstraints="NO" id="hRx-YC-ptz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Farmer_body" translatesAutoresizingMaskIntoConstraints="NO" id="hRx-YC-ptz">
                                 <rect key="frame" x="650" y="326" width="354" height="297"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKa-Hs-muk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922" y="-483"/>
+            <point key="canvasLocation" x="1134" y="-484"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xkl-KA-7MB">
@@ -201,7 +201,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URh-nw-ulL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2276" y="-483"/>
+            <point key="canvasLocation" x="345" y="-484"/>
         </scene>
         <!--Transition Game View Controller-->
         <scene sceneID="F5M-Oe-WSt">
@@ -226,7 +226,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q58-KB-Z7M">
                                 <rect key="frame" x="47" y="393" width="230" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="farmer"/>
+                                <state key="normal" title="Button" image="Farmer_body"/>
                                 <connections>
                                     <action selector="touchFarmer:" destination="aaa-Rt-oVu" eventType="touchUpInside" id="hN9-0m-6D4"/>
                                 </connections>
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGQ-Ua-xIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6091.9921875" y="888.28125"/>
+            <point key="canvasLocation" x="3448" y="888"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R5K-Jp-Ed4">
@@ -262,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sex-P3-tcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="-483"/>
+            <point key="canvasLocation" x="2670" y="-484"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="5eb-nm-B3X">
@@ -372,7 +372,7 @@
         <!--SecondPage-->
         <scene sceneID="r4N-GE-eoC">
             <objects>
-                <viewController restorationIdentifier="SecondPageViewController" storyboardIdentifier="SecondPageViewController" title="SecondPage" id="tVn-Ga-LPJ" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SecondPageViewController" storyboardIdentifier="SecondPageViewController" title="SecondPage" id="tVn-Ga-LPJ" customClass="FHViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cRd-0R-X0M"/>
                         <viewControllerLayoutGuide type="bottom" id="iO9-Ku-k7Q"/>
@@ -388,7 +388,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy7-wp-tle">
                                 <rect key="frame" x="612" y="319" width="230" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="farmer"/>
+                                <state key="normal" title="Button" image="Farmer_body"/>
                                 <connections>
                                     <action selector="sVCstartAmination:" destination="tVn-Ga-LPJ" eventType="touchUpInside" id="cGE-FG-jGc"/>
                                 </connections>
@@ -405,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fev-2v-25q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.5078125" y="888.28125"/>
+            <point key="canvasLocation" x="345" y="888"/>
         </scene>
         <!--Summary Game View Controller-->
         <scene sceneID="xk4-Rh-l93">
@@ -448,12 +448,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="im9-Wk-1ZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4942.96875" y="-483.59375"/>
+            <point key="canvasLocation" x="4247" y="-484"/>
         </scene>
         <!--ThirdPage-->
         <scene sceneID="HDJ-G1-UhA">
             <objects>
-                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" title="ThirdPage" id="hE0-gY-UkO" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ThirdPageViewController" storyboardIdentifier="ThirdPageViewController" title="ThirdPage" id="hE0-gY-UkO" customClass="FHViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QsB-uh-pA8"/>
                         <viewControllerLayoutGuide type="bottom" id="xZb-yn-0mZ"/>
@@ -491,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOU-X5-ZX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.6562499999998" y="889.84375"/>
+            <point key="canvasLocation" x="1134" y="888"/>
         </scene>
         <!--FifthPage-->
         <scene sceneID="y3U-gf-TrK">
@@ -515,12 +515,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJj-mR-szD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4581.4453125" y="889.84375"/>
+            <point key="canvasLocation" x="2670" y="890"/>
         </scene>
         <!--FourthPage-->
         <scene sceneID="rEb-ry-4h3">
             <objects>
-                <viewController restorationIdentifier="FourthPageViewController" storyboardIdentifier="FourthPageViewController" title="FourthPage" id="ii2-Wg-FOw" customClass="FVViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FourthPageViewController" storyboardIdentifier="FourthPageViewController" title="FourthPage" id="ii2-Wg-FOw" customClass="FHViewController" customModule="feedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fG3-uS-tdF"/>
                         <viewControllerLayoutGuide type="bottom" id="nd9-BB-bKc"/>
@@ -559,15 +559,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXf-qA-JEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3140.625" y="889.84375"/>
+            <point key="canvasLocation" x="1903" y="888"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Farmer_body" width="1302" height="2284"/>
         <image name="animalFeedMoon" width="405" height="532"/>
         <image name="animalFeedStar" width="449" height="532"/>
         <image name="blankoBackground2-1" width="1280" height="960"/>
         <image name="cloud-transparent" width="616" height="425"/>
-        <image name="farmer" width="656" height="1035"/>
         <image name="fee" width="891" height="987"/>
         <image name="feeWithOpenhair" width="804" height="934"/>
         <image name="grass-2" width="1280" height="800"/>
@@ -582,9 +582,8 @@
         <image name="wood-dark" width="800" height="531"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PPA-He-7hD"/>
         <segue reference="V91-07-TyJ"/>
-        <segue reference="mlx-OT-Z4v"/>
+        <segue reference="jha-ID-UxK"/>
         <segue reference="R6O-96-ber"/>
     </inferredMetricsTieBreakers>
 </document>
